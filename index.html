@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>혜성여고 교칙 안내</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Pretendard",
+               "Noto Sans KR", sans-serif;
+  background: #f7f8fa;
+  color: #202124;
+}
+
+header {
+  background: white;
+  padding: 18px 22px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.logo span {
+  color: #ff7f70;
+}
+
+.hero {
+  padding: 65px 22px 55px;
+  background: linear-gradient(135deg, #fff1ee, #fffafa);
+}
+
+.hero small {
+  color: #ff7567;
+  font-weight: 700;
+}
+
+.hero h1 {
+  font-size: 38px;
+  line-height: 1.25;
+  margin: 12px 0;
+}
+
+.hero p {
+  color: #666;
+  line-height: 1.7;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 35px 20px 70px;
+}
+
+.search {
+  width: 100%;
+  padding: 17px 20px;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  font-size: 16px;
+  margin-bottom: 25px;
+  outline: none;
+}
+
+.search:focus {
+  border-color: #ff897c;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 13px;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 23px;
+  border: 1px solid #eee;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+}
+
+.icon {
+  font-size: 28px;
+}
+
+.card h2 {
+  font-size: 18px;
+  margin: 12px 0 5px;
+}
+
+.card p {
+  margin: 0;
+  color: #888;
+  font-size: 14px;
+}
+
+.rules {
+  margin-top: 35px;
+}
+
+.rule-box {
+  background: white;
+  padding: 25px;
+  margin-bottom: 15px;
+  border-radius: 18px;
+  border: 1px solid #eee;
+}
+
+.rule-box h3 {
+  margin-top: 0;
+}
+
+.rule-box li {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #999;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 31px;
+  }
+
+  .categories {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">혜성<span>여고</span> · 교칙 안내</div>
+</header>
+
+<section class="hero">
+  <small>HYESUNG GIRLS' HIGH SCHOOL</small>
+  <h1>학생들을 위한<br>교칙 안내</h1>
+  <p>
+    꼭 알아야 할 학교생활 규칙을<br>
+    쉽고 빠르게 확인해보세요.
+  </p>
+</section>
+
+<main class="container">
+
+<input
+  class="search"
+  type="text"
+  placeholder="🔍 궁금한 교칙을 검색해보세요"
+  onkeyup="searchRules()"
+>
+
+<div class="categories">
+
+  <div class="card" onclick="showRule('attendance')">
+    <div class="icon">🕐</div>
+    <h2>출결</h2>
+    <p>지각 · 결석 · 조퇴</p>
+  </div>
+
+  <div class="card" onclick="showRule('uniform')">
+    <div class="icon">👔</div>
+    <h2>복장</h2>
+    <p>교복 · 체육복 · 복장 규정</p>
+  </div>
+
+  <div class="card" onclick="showRule('phone')">
+    <div class="icon">📱</div>
+    <h2>스마트기기</h2>
+    <p>휴대전화 · 전자기기</p>
+  </div>
+
+  <div class="card" onclick="showRule('school')">
+    <div class="icon">🏫</div>
+    <h2>교내생활</h2>
+    <p>학교생활 기본 규칙</p>
+  </div>
+
+  <div class="card" onclick="showRule('safety')">
+    <div class="icon">🛡️</div>
+    <h2>안전</h2>
+    <p>안전사고 · 시설 이용</p>
+  </div>
+
+  <div class="card" onclick="showRule('etc')">
+    <div class="icon">📌</div>
+    <h2>기타</h2>
+    <p>알아두면 좋은 규칙</p>
+  </div>
+
+</div>
+
+<section class="rules" id="rules">
+
+  <div class="rule-box">
+    <h3>📌 교칙을 한눈에</h3>
+    <p>
+      학교생활에 필요한 주요 규칙을
+      학생들이 이해하기 쉽게 정리했습니다.
+    </p>
+    <p style="color:#888;">
+      ※ 정확한 내용은 학교 공식 교칙을 기준으로 합니다.
+    </p>
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+  Hyesung Girls' High School · Student Guide
+</footer>
+
+<script>
+
+const rules = {
+
+attendance: `
+<div class="rule-box">
+<h3>🕐 출결</h3>
+<ul>
+<li>등교 시간을 지켜주세요.</li>
+<li>지각·결석·조퇴 시 정해진 절차를 따라주세요.</li>
+<li>출결 관련 자세한 사항은 학교 규정을 확인해주세요.</li>
+</ul>
+</div>`,
+
+uniform: `
+<div class="rule-box">
+<h3>👔 복장</h3>
+<ul>
+<li>학교에서 정한 교복 착용 규정을 지켜주세요.</li>
+<li>교복 및 체육복 착용 가능 시간을 확인해주세요.</li>
+<li>과도한 복장 변형은 금지될 수 있습니다.</li>
+</ul>
+</div>`,
+
+phone: `
+<div class="rule-box">
+<h3>📱 스마트기기</h3>
+<ul>
+<li>수업 중 휴대전화 및 스마트기기 사용을 자제해주세요.</li>
+<li>학교에서 정한 스마트기기 사용 규정을 지켜주세요.</li>
+<li>수업에 방해가 되는 기기 사용은 제한될 수 있습니다.</li>
+</ul>
+</div>`,
+
+school: `
+<div class="rule-box">
+<h3>🏫 교내생활</h3>
+<ul>
+<li>학생 간 서로 존중하는 학교생활을 해주세요.</li>
+<li>학교 시설과 물품을 소중히 사용해주세요.</li>
+<li>수업 및 학교 행사에 성실하게 참여해주세요.</li>
+</ul>
+</div>`,
+
+safety: `
+<div class="rule-box">
+<h3>🛡️ 안전</h3>
+<ul>
+<li>교내 안전수칙을 지켜주세요.</li>
+<li>위험한 행동이나 시설물의 부적절한 사용을 금지합니다.</li>
+<li>안전사고 발생 시 즉시 선생님께 알려주세요.</li>
+</ul>
+</div>`,
+
+etc: `
+<div class="rule-box">
+<h3>📌 기타</h3>
+<ul>
+<li>학교의 모든 구성원을 존중해주세요.</li>
+<li>학교에서 정한 생활 규정을 준수해주세요.</li>
+<li>세부적인 사항은 학교 공식 규정을 확인해주세요.</li>
+</ul>
+</div>`
+};
+
+function showRule(type) {
+  document.getElementById("rules").innerHTML = rules[type];
+  window.scrollTo({
+    top: document.getElementById("rules").offsetTop - 80,
+    behavior: "smooth"
+  });
+}
+
+function searchRules() {
+  const input = document.querySelector(".search").value.toLowerCase();
+  const boxes = document.querySelectorAll(".card");
+
+  boxes.forEach(box => {
+    box.style.display =
+      box.innerText.toLowerCase().includes(input)
+      ? "block"
+      : "none";
+  });
+}
+
+</script>
+
+</body>
+</html>
