@@ -1,3 +1,4 @@
+  
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -21,7 +22,6 @@ body {
   background: #f4f7fb;
   color: #172033;
 }
-
 
 /* HEADER */
 
@@ -81,7 +81,6 @@ header {
   background: #193b5d;
 }
 
-
 /* HERO */
 
 .hero {
@@ -119,7 +118,6 @@ header {
   font-size: 15px;
 }
 
-
 /* SEARCH */
 
 .search-box {
@@ -148,7 +146,6 @@ header {
   border-color: #6794c4;
   box-shadow: 0 5px 20px rgba(50,100,150,0.08);
 }
-
 
 /* FILTER */
 
@@ -190,7 +187,6 @@ header {
   color: #8994a5;
   font-size: 12px;
 }
-
 
 /* CARDS */
 
@@ -249,7 +245,6 @@ header {
   font-size: 13px;
 }
 
-
 /* DETAIL */
 
 .detail {
@@ -286,28 +281,22 @@ header {
   font-weight: 900;
 }
 
-
 /* ITEM FAVORITE */
 
 .item-favorite {
   position: absolute;
   right: 0;
   top: 0;
-
   width: 32px;
   height: 28px;
-
   border: 1px solid #dce3ec;
   background: white;
   color: #8090a4;
-
   border-radius: 8px;
   cursor: pointer;
-
   font-size: 16px;
   line-height: 26px;
   padding: 0;
-
   transition: 0.2s;
 }
 
@@ -321,7 +310,6 @@ header {
   border-color: #c8d9ea;
   color: #244c75;
 }
-
 
 /* POINT */
 
@@ -363,7 +351,6 @@ header {
   opacity: 0.7;
 }
 
-
 /* CLOSE */
 
 .close {
@@ -381,7 +368,6 @@ header {
   background: #193b5d;
 }
 
-
 /* SEARCH HIGHLIGHT */
 
 .search-highlight {
@@ -392,7 +378,6 @@ header {
   font-weight: 800;
 }
 
-
 /* QUESTION */
 
 .question-box {
@@ -401,13 +386,10 @@ header {
   border: 1px solid #e4e9f1;
   border-radius: 20px;
   padding: 23px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   gap: 20px;
-
   box-shadow: 0 4px 15px rgba(30,50,80,0.035);
 }
 
@@ -446,6 +428,191 @@ header {
   background: #193b5d;
 }
 
+/* MY POINTS */
+
+.my-points {
+  margin-top: 28px;
+  background: white;
+  border: 1px solid #e4e9f1;
+  border-radius: 22px;
+  padding: 27px;
+  box-shadow: 0 4px 15px rgba(30,50,80,0.035);
+  scroll-margin-top: 90px;
+}
+
+.my-points-header {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 7px;
+}
+
+.my-points-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 13px;
+  background: #eef4fc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 900;
+  color: #35638e;
+}
+
+.my-points h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.my-points-description {
+  color: #7a8596;
+  font-size: 13px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.point-form {
+  display: grid;
+  grid-template-columns: 150px 120px 1fr 100px;
+  gap: 10px;
+}
+
+.point-form input,
+.point-form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dce3ec;
+  border-radius: 10px;
+  font-size: 13px;
+  outline: none;
+  background: white;
+}
+
+.point-form input:focus,
+.point-form select:focus {
+  border-color: #6794c4;
+}
+
+.add-point-btn {
+  border: none;
+  background: #244c75;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.add-point-btn:hover {
+  background: #193b5d;
+}
+
+.point-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.summary-item {
+  background: #f7faff;
+  border: 1px solid #e6edf6;
+  border-radius: 14px;
+  padding: 15px;
+  text-align: center;
+}
+
+.summary-label {
+  font-size: 12px;
+  color: #7a8596;
+  margin-bottom: 5px;
+}
+
+.summary-number {
+  font-size: 22px;
+  font-weight: 900;
+  color: #244c75;
+}
+
+.point-history {
+  margin-top: 18px;
+}
+
+.history-empty {
+  text-align: center;
+  padding: 25px 10px;
+  color: #8a95a5;
+  font-size: 13px;
+  background: #f7faff;
+  border-radius: 14px;
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px;
+  background: #f7faff;
+  border: 1px solid #e6edf6;
+  border-radius: 13px;
+  margin-bottom: 8px;
+}
+
+.history-date {
+  color: #8a95a5;
+  font-size: 11px;
+  min-width: 82px;
+}
+
+.history-content {
+  flex: 1;
+  font-size: 13px;
+  color: #354155;
+}
+
+.history-score {
+  font-size: 14px;
+  font-weight: 900;
+  min-width: 45px;
+  text-align: right;
+}
+
+.history-score.plus {
+  color: #247a4b;
+}
+
+.history-score.minus {
+  color: #c44747;
+}
+
+.delete-history {
+  border: 1px solid #dce3ec;
+  background: white;
+  color: #7b8798;
+  border-radius: 8px;
+  padding: 6px 8px;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.delete-history:hover {
+  background: #f0f3f7;
+}
+
+.clear-history-btn {
+  width: 100%;
+  margin-top: 10px;
+  border: 1px solid #dce3ec;
+  background: white;
+  color: #7b8798;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.clear-history-btn:hover {
+  background: #f6f8fb;
+}
 
 /* CALCULATOR */
 
@@ -455,9 +622,7 @@ header {
   border: 1px solid #e4e9f1;
   border-radius: 22px;
   padding: 27px;
-
   box-shadow: 0 4px 15px rgba(30,50,80,0.035);
-
   scroll-margin-top: 90px;
 }
 
@@ -472,13 +637,10 @@ header {
   width: 44px;
   height: 44px;
   border-radius: 13px;
-
   background: #eef4fc;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   font-size: 13px;
   font-weight: 900;
   color: #35638e;
@@ -519,13 +681,10 @@ header {
 .calc-item input {
   width: 100%;
   padding: 12px;
-
   border: 1px solid #dce3ec;
   border-radius: 10px;
-
   font-size: 16px;
   outline: none;
-
   background: white;
 }
 
@@ -536,16 +695,12 @@ header {
 .calculate-btn {
   width: 100%;
   margin-top: 15px;
-
   border: none;
   background: #244c75;
   color: white;
-
   padding: 13px;
   border-radius: 12px;
-
   cursor: pointer;
-
   font-size: 14px;
   font-weight: 800;
 }
@@ -557,14 +712,11 @@ header {
 .reset-btn {
   width: 100%;
   margin-top: 8px;
-
   border: 1px solid #dce3ec;
   background: white;
   color: #69778b;
-
   padding: 11px;
   border-radius: 12px;
-
   cursor: pointer;
 }
 
@@ -574,14 +726,10 @@ header {
 
 .calculator-result {
   margin-top: 15px;
-
   background: #eef4fc;
   border-radius: 15px;
-
   padding: 17px;
-
   text-align: center;
-
   font-size: 14px;
   line-height: 1.7;
 }
@@ -592,51 +740,35 @@ header {
   color: #244c75;
 }
 
-
 /* NOTICE */
 
 .notice {
   margin-top: 25px;
-
   background: #edf4fc;
   border: 1px solid #dce8f5;
-
   border-radius: 17px;
-
   padding: 18px;
-
   color: #53647d;
-
   font-size: 12px;
   line-height: 1.7;
 }
-
 
 /* TOP */
 
 .top-button {
   position: fixed;
-
   right: 20px;
   bottom: 20px;
-
   width: 46px;
   height: 46px;
-
   border: none;
   border-radius: 50%;
-
   background: #244c75;
   color: white;
-
   font-size: 19px;
-
   cursor: pointer;
-
   display: none;
-
   z-index: 200;
-
   box-shadow: 0 6px 18px rgba(30,50,80,0.2);
 }
 
@@ -644,25 +776,34 @@ header {
   transform: translateY(-2px);
 }
 
-
 /* FOOTER */
 
 footer {
   text-align: center;
-
   padding: 30px 20px;
-
   color: #8b95a5;
-
   font-size: 11px;
-
   border-top: 1px solid #e6eaf0;
-
   background: white;
 }
 
-
 /* MOBILE */
+
+@media (max-width: 750px) {
+
+  .point-form {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .point-form input:nth-child(3) {
+    grid-column: 1 / 3;
+  }
+
+  .add-point-btn {
+    min-height: 42px;
+  }
+
+}
 
 @media (max-width: 650px) {
 
@@ -703,6 +844,18 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .point-form {
+    grid-template-columns: 1fr;
+  }
+
+  .point-form input:nth-child(3) {
+    grid-column: auto;
+  }
+
+  .point-summary {
+    grid-template-columns: 1fr;
+  }
+
   .point-plus::after,
   .point-minus::after {
     display: none;
@@ -725,14 +878,20 @@ footer {
     width: 30px;
   }
 
+  .history-item {
+    flex-wrap: wrap;
+  }
+
+  .history-content {
+    min-width: 60%;
+  }
+
 }
 
 </style>
 </head>
 
-
 <body>
-
 
 <header>
 
@@ -744,15 +903,11 @@ footer {
 
     <div class="header-actions">
 
-      <button
-        class="header-button"
-        onclick="goHome()">
+      <button class="header-button" onclick="goHome()">
         HOME
       </button>
 
-      <button
-        class="header-button question-button"
-        onclick="openQuestionForm()">
+      <button class="header-button question-button" onclick="openQuestionForm()">
         질문 남기기
       </button>
 
@@ -798,27 +953,19 @@ footer {
 
 <div class="filter-box">
 
-  <button
-    class="filter-btn active"
-    onclick="setFilter('all', this)">
+  <button class="filter-btn active" onclick="setFilter('all', this)">
     전체
   </button>
 
-  <button
-    class="filter-btn"
-    onclick="setFilter('plus', this)">
+  <button class="filter-btn" onclick="setFilter('plus', this)">
     상점
   </button>
 
-  <button
-    class="filter-btn"
-    onclick="setFilter('minus', this)">
+  <button class="filter-btn" onclick="setFilter('minus', this)">
     벌점
   </button>
 
-  <button
-    class="filter-btn"
-    onclick="setFilter('favorite', this)">
+  <button class="filter-btn" onclick="setFilter('favorite', this)">
     즐겨찾기
   </button>
 
@@ -837,24 +984,19 @@ footer {
 
 <!-- 01 출결 -->
 
-<div class="card"
-     data-search="출결 결석 지각 조퇴 결과 무단 외출 행사 불참">
+<div class="card" data-search="출결 결석 지각 조퇴 결과 무단 외출 행사 불참">
 
   <div class="icon">01</div>
 
   <h2>출결</h2>
 
-  <p>
-    결석·지각·조퇴·결과·외출 등 출결 관련 규정
-  </p>
+  <p>결석·지각·조퇴·결과·외출 등 출결 관련 규정</p>
 
   <div class="detail">
 
     <strong>출결 관련 상점·벌점</strong>
 
-    <div class="section-title">
-      벌점
-    </div>
+    <div class="section-title">벌점</div>
 
     <ul>
 
@@ -875,10 +1017,7 @@ footer {
 
     </ul>
 
-
-    <div class="section-title">
-      상점
-    </div>
+    <div class="section-title">상점</div>
 
     <ul>
 
@@ -889,9 +1028,7 @@ footer {
 
     </ul>
 
-    <button class="close" onclick="closeDetail(event)">
-      닫기
-    </button>
+    <button class="close" onclick="closeDetail(event)">닫기</button>
 
   </div>
 
@@ -900,24 +1037,19 @@ footer {
 
 <!-- 02 복장 -->
 
-<div class="card"
-     data-search="복장 용의 머리 염색 파마 귀걸이 피어싱 교복 신발 모자">
+<div class="card" data-search="복장 용의 머리 염색 파마 귀걸이 피어싱 교복 신발 모자">
 
   <div class="icon">02</div>
 
   <h2>복장·용의</h2>
 
-  <p>
-    교복·머리·신발·모자 등 복장 관련 규정
-  </p>
+  <p>교복·머리·신발·모자 등 복장 관련 규정</p>
 
   <div class="detail">
 
     <strong>복장·용의 관련 상점·벌점</strong>
 
-    <div class="section-title">
-      벌점
-    </div>
+    <div class="section-title">벌점</div>
 
     <ul>
 
@@ -938,10 +1070,7 @@ footer {
 
     </ul>
 
-
-    <div class="section-title">
-      상점
-    </div>
+    <div class="section-title">상점</div>
 
     <ul>
 
@@ -952,9 +1081,7 @@ footer {
 
     </ul>
 
-    <button class="close" onclick="closeDetail(event)">
-      닫기
-    </button>
+    <button class="close" onclick="closeDetail(event)">닫기</button>
 
   </div>
 
@@ -963,24 +1090,19 @@ footer {
 
 <!-- 03 스마트기기 -->
 
-<div class="card"
-     data-search="스마트기기 휴대폰 핸드폰 스마트폰 전자기기 무선 이어폰">
+<div class="card" data-search="스마트기기 휴대폰 핸드폰 스마트폰 전자기기 무선 이어폰">
 
   <div class="icon">03</div>
 
   <h2>스마트기기</h2>
 
-  <p>
-    전자기기·무선 이어폰 등 사용 관련 규정
-  </p>
+  <p>전자기기·무선 이어폰 등 사용 관련 규정</p>
 
   <div class="detail">
 
     <strong>스마트기기 관련 벌점</strong>
 
-    <div class="section-title">
-      벌점
-    </div>
+    <div class="section-title">벌점</div>
 
     <ul>
 
@@ -996,9 +1118,7 @@ footer {
 
     </ul>
 
-    <button class="close" onclick="closeDetail(event)">
-      닫기
-    </button>
+    <button class="close" onclick="closeDetail(event)">닫기</button>
 
   </div>
 
@@ -1007,25 +1127,19 @@ footer {
 
 <!-- 04 교내생활 -->
 
-<div class="card"
-     data-search="교내생활 청소 비품 공공기물 쓰레기 개수대 음식물 공놀이 소란 출입금지 장소 월담">
+<div class="card" data-search="교내생활 청소 비품 공공기물 쓰레기 개수대 음식물 공놀이 소란 출입금지 장소 월담">
 
   <div class="icon">04</div>
 
   <h2>교내생활</h2>
 
-  <p>
-    청소·시설·쓰레기·학교생활 관련 규정
-  </p>
+  <p>청소·시설·쓰레기·학교생활 관련 규정</p>
 
   <div class="detail">
 
     <strong>교내생활 관련 상점·벌점</strong>
 
-
-    <div class="section-title">
-      상점
-    </div>
+    <div class="section-title">상점</div>
 
     <ul>
 
@@ -1051,10 +1165,7 @@ footer {
 
     </ul>
 
-
-    <div class="section-title">
-      벌점
-    </div>
+    <div class="section-title">벌점</div>
 
     <ul>
 
@@ -1095,9 +1206,7 @@ footer {
 
     </ul>
 
-    <button class="close" onclick="closeDetail(event)">
-      닫기
-    </button>
+    <button class="close" onclick="closeDetail(event)">닫기</button>
 
   </div>
 
@@ -1106,25 +1215,19 @@ footer {
 
 <!-- 05 안전 -->
 
-<div class="card"
-     data-search="안전 학교폭력 폭력 안전사고 흡연 음주 신고 외부인 비품 고장 훼손">
+<div class="card" data-search="안전 학교폭력 폭력 안전사고 흡연 음주 신고 외부인 비품 고장 훼손">
 
   <div class="icon">05</div>
 
   <h2>안전·학교폭력</h2>
 
-  <p>
-    학생 안전·학교폭력·위험 상황 신고 관련 규정
-  </p>
+  <p>학생 안전·학교폭력·위험 상황 신고 관련 규정</p>
 
   <div class="detail">
 
     <strong>안전·학교폭력 관련 상점</strong>
 
-
-    <div class="section-title">
-      상점
-    </div>
+    <div class="section-title">상점</div>
 
     <ul>
 
@@ -1155,10 +1258,7 @@ footer {
 
     </ul>
 
-
-    <div class="section-title">
-      벌점
-    </div>
+    <div class="section-title">벌점</div>
 
     <ul>
 
@@ -1174,9 +1274,7 @@ footer {
 
     </ul>
 
-    <button class="close" onclick="closeDetail(event)">
-      닫기
-    </button>
+    <button class="close" onclick="closeDetail(event)">닫기</button>
 
   </div>
 
@@ -1185,25 +1283,19 @@ footer {
 
 <!-- 06 예절 -->
 
-<div class="card"
-     data-search="예절 인사 고운말 욕설 불손 언행 교사 어른 급우 선후배 수업태도">
+<div class="card" data-search="예절 인사 고운말 욕설 불손 언행 교사 어른 급우 선후배 수업태도">
 
   <div class="icon">06</div>
 
   <h2>예절·생활</h2>
 
-  <p>
-    언어·인사·수업 태도 등 서로를 존중하는 생활
-  </p>
+  <p>언어·인사·수업 태도 등 서로를 존중하는 생활</p>
 
   <div class="detail">
 
     <strong>예절·생활 관련 상점·벌점</strong>
 
-
-    <div class="section-title">
-      상점
-    </div>
+    <div class="section-title">상점</div>
 
     <ul>
 
@@ -1249,10 +1341,7 @@ footer {
 
     </ul>
 
-
-    <div class="section-title">
-      벌점
-    </div>
+    <div class="section-title">벌점</div>
 
     <ul>
 
@@ -1278,9 +1367,7 @@ footer {
 
     </ul>
 
-    <button class="close" onclick="closeDetail(event)">
-      닫기
-    </button>
+    <button class="close" onclick="closeDetail(event)">닫기</button>
 
   </div>
 
@@ -1289,16 +1376,13 @@ footer {
 
 <!-- 07 전체 상점 -->
 
-<div class="card"
-     data-search="상점 상점항목 선행 모범 역할 행사 청소 비품 도우미 인사 고운말 수업">
+<div class="card" data-search="상점 상점항목 선행 모범 역할 행사 청소 비품 도우미 인사 고운말 수업">
 
   <div class="icon">07</div>
 
   <h2>전체 상점</h2>
 
-  <p>
-    생활평점제 상점 항목을 한눈에 확인
-  </p>
+  <p>생활평점제 상점 항목을 한눈에 확인</p>
 
   <div class="detail">
 
@@ -1306,116 +1390,31 @@ footer {
 
     <ul>
 
-      <li>
-        단체 및 행사 활동에 솔선수범함
-        <span class="point-plus">+1점</span>
-      </li>
-
-      <li>
-        청소활동에 지속적으로 성실하게 참여함
-        <span class="point-plus">+1점</span>
-      </li>
-
-      <li>
-        학급 비품 관리를 지속적으로 성실하게 함
-        <span class="point-plus">+2점</span>
-      </li>
-
-      <li>
-        학급 도우미 활동에 성실하게 참여함
-        <span class="point-plus">+1점</span>
-      </li>
-
-      <li>
-        기타 맡은 역할을 성실하게 수행함
-        <span class="point-plus">+1점</span>
-      </li>
-
-      <li>
-        장애학생 도우미 활동에 성실하게 참여함
-        <span class="point-plus">+3점</span>
-      </li>
-
-      <li>
-        외부인 교실 무단출입 신고
-        <span class="point-plus">+2점</span>
-      </li>
-
-      <li>
-        비품·공공기물의 고장 및 훼손 신고
-        <span class="point-plus">+2점</span>
-      </li>
-
-      <li>
-        흡연 또는 음주 행위 신고
-        <span class="point-plus">+5점</span>
-      </li>
-
-      <li>
-        학생 안전사고 신고
-        <span class="point-plus">+2점</span>
-      </li>
-
-      <li>
-        학교폭력 관련 신고
-        <span class="point-plus">+5점</span>
-      </li>
-
-      <li>
-        분실물 습득 신고
-        <span class="point-plus">+1점</span>
-      </li>
-
-      <li>
-        학부모 및 외부인에 의해 선행·모범이 제보된 학생
-        <span class="point-plus">+3점</span>
-      </li>
-
-      <li>
-        언론 매체에 선행·모범이 보도됨
-        <span class="point-plus">+5점</span>
-      </li>
-
-      <li>
-        인사예절이 다른 학생의 귀감이 됨
-        <span class="point-plus">+1점</span>
-      </li>
-
-      <li>
-        고운 말을 지속적으로 사용하여 다른 학생의 귀감이 됨
-        <span class="point-plus">+1점</span>
-      </li>
-
-      <li>
-        용의 복장이 지속적으로 다른 학생의 귀감이 됨
-        <span class="point-plus">+1점</span>
-      </li>
-
-      <li>
-        무결석 학급 1학기(학급 전체학생에게 부여)
-        <span class="point-plus">+3점</span>
-      </li>
-
-      <li>
-        수업 준비 및 숙제를 지속적으로 성실하게 함
-        <span class="point-plus">+1점</span>
-      </li>
-
-      <li>
-        수업 태도가 다른 학생의 귀감이 됨
-        <span class="point-plus">+1점</span>
-      </li>
-
-      <li>
-        상기 내용에 포함되지 않는 사항
-        <span class="point-plus">+1~3점</span>
-      </li>
+      <li>단체 및 행사 활동에 솔선수범함 <span class="point-plus">+1점</span></li>
+      <li>청소활동에 지속적으로 성실하게 참여함 <span class="point-plus">+1점</span></li>
+      <li>학급 비품 관리를 지속적으로 성실하게 함 <span class="point-plus">+2점</span></li>
+      <li>학급 도우미 활동에 성실하게 참여함 <span class="point-plus">+1점</span></li>
+      <li>기타 맡은 역할을 성실하게 수행함 <span class="point-plus">+1점</span></li>
+      <li>장애학생 도우미 활동에 성실하게 참여함 <span class="point-plus">+3점</span></li>
+      <li>외부인 교실 무단출입 신고 <span class="point-plus">+2점</span></li>
+      <li>비품·공공기물의 고장 및 훼손 신고 <span class="point-plus">+2점</span></li>
+      <li>흡연 또는 음주 행위 신고 <span class="point-plus">+5점</span></li>
+      <li>학생 안전사고 신고 <span class="point-plus">+2점</span></li>
+      <li>학교폭력 관련 신고 <span class="point-plus">+5점</span></li>
+      <li>분실물 습득 신고 <span class="point-plus">+1점</span></li>
+      <li>학부모 및 외부인에 의해 선행·모범이 제보된 학생 <span class="point-plus">+3점</span></li>
+      <li>언론 매체에 선행·모범이 보도됨 <span class="point-plus">+5점</span></li>
+      <li>인사예절이 다른 학생의 귀감이 됨 <span class="point-plus">+1점</span></li>
+      <li>고운 말을 지속적으로 사용하여 다른 학생의 귀감이 됨 <span class="point-plus">+1점</span></li>
+      <li>용의 복장이 지속적으로 다른 학생의 귀감이 됨 <span class="point-plus">+1점</span></li>
+      <li>무결석 학급 1학기(학급 전체학생에게 부여) <span class="point-plus">+3점</span></li>
+      <li>수업 준비 및 숙제를 지속적으로 성실하게 함 <span class="point-plus">+1점</span></li>
+      <li>수업 태도가 다른 학생의 귀감이 됨 <span class="point-plus">+1점</span></li>
+      <li>상기 내용에 포함되지 않는 사항 <span class="point-plus">+1~3점</span></li>
 
     </ul>
 
-    <button class="close" onclick="closeDetail(event)">
-      닫기
-    </button>
+    <button class="close" onclick="closeDetail(event)">닫기</button>
 
   </div>
 
@@ -1424,16 +1423,13 @@ footer {
 
 <!-- 08 전체 벌점 -->
 
-<div class="card"
-     data-search="벌점 벌점항목 지각 결석 행사 청소 월담 출입 티켓 사행성 음란물 술 담배 쓰레기 욕설 파손 염색 교복 이어폰">
+<div class="card" data-search="벌점 벌점항목 지각 결석 행사 청소 월담 출입 티켓 사행성 음란물 술 담배 쓰레기 욕설 파손 염색 교복 이어폰">
 
   <div class="icon">08</div>
 
   <h2>전체 벌점</h2>
 
-  <p>
-    생활평점제 벌점 항목을 한눈에 확인
-  </p>
+  <p>생활평점제 벌점 항목을 한눈에 확인</p>
 
   <div class="detail">
 
@@ -1441,146 +1437,37 @@ footer {
 
     <ul>
 
-      <li>
-        무단 지각·무단 결과·무단 조퇴·무단 외출
-        <span class="point-minus">-1~2점</span>
-      </li>
-
-      <li>
-        무단 결석
-        <span class="point-minus">-2점</span>
-      </li>
-
-      <li>
-        교내·외 단체 활동 또는 행사 무단 불참
-        <span class="point-minus">-2점</span>
-      </li>
-
-      <li>
-        청소 활동에 지속적으로 불성실하게 참여
-        <span class="point-minus">-2점</span>
-      </li>
-
-      <li>
-        월담(출입문을 사용하지 않고 담 등을 넘어 학교에 출입함)
-        <span class="point-minus">-2점</span>
-      </li>
-
-      <li>
-        학교 허락 없이 티켓 제작·판매·알선 및 행사 참석
-        <span class="point-minus">-3점</span>
-      </li>
-
-      <li>
-        출입 금지 장소 출입
-        <span class="point-minus">-3점</span>
-      </li>
-
-      <li>
-        수업시간 중 전자기기 무단 사용
-        <span class="point-minus">-1점</span>
-      </li>
-
-      <li>
-        사행성 오락(카드·화투·동전치기 등)
-        <span class="point-minus">-3점</span>
-      </li>
-
-      <li>
-        음란물 반입·탐독·시청
-        <span class="point-minus">-2점</span>
-      </li>
-
-      <li>
-        등교 시 교문 50m 이내 정차 및 하차
-        <span class="point-minus">-2점</span>
-      </li>
-
-      <li>
-        개인형 이동장치(PM)를 타고 등·하교
-        <span class="point-minus">-3점</span>
-      </li>
-
-      <li>
-        교내에서 술·담배 소지 또는 단체 활동 시 소지 및 반입
-        <span class="point-minus">-3점</span>
-      </li>
-
-      <li>
-        교내·외에서 음주 또는 흡연
-        <span class="point-minus">-3점</span>
-      </li>
-
-      <li>
-        교내에서 껌 또는 쓰레기를 함부로 뱉거나 버림
-        <span class="point-minus">-1점</span>
-      </li>
-
-      <li>
-        개수대에 음식물 또는 이물질을 버림
-        <span class="point-minus">-3점</span>
-      </li>
-
-      <li>
-        실내에서 실외화 착용, 실외에서 실내화 착용
-        <span class="point-minus">-1점</span>
-      </li>
-
-      <li>
-        교내에서 소란 유발(공놀이·말 타기 놀이 등)
-        <span class="point-minus">-1점</span>
-      </li>
-
-      <li>
-        급우 또는 선후배에게 심한 욕설
-        <span class="point-minus">-2점</span>
-      </li>
-
-      <li>
-        교사 또는 어른에게 불손한 언행
-        <span class="point-minus">-3점</span>
-      </li>
-
-      <li>
-        교내 비품 및 공공기물 훼손 또는 파손
-        <span class="point-minus">-3점</span>
-      </li>
-
-      <li>
-        두발 또는 용의규정 위반(파마·염색·귀걸이·피어싱 등)
-        <span class="point-minus">-1점</span>
-      </li>
-
-      <li>
-        복장 규정 위반(교복·신발·모자 등)
-        <span class="point-minus">-1점</span>
-      </li>
-
-      <li>
-        수업 중 면학 분위기 저해(잡담·장난·노래·무단출입 등)
-        <span class="point-minus">-1~2점</span>
-      </li>
-
-      <li>
-        수업 준비 불량 및 과제 불이행
-        <span class="point-minus">-1~2점</span>
-      </li>
-
-      <li>
-        교육 활동 중 허락받지 않은 무선 이어폰 착용
-        <span class="point-minus">-2점</span>
-      </li>
-
-      <li>
-        상기 내용에 포함되지 않는 사항
-        <span class="point-minus">-1~3점</span>
-      </li>
+      <li>무단 지각·무단 결과·무단 조퇴·무단 외출 <span class="point-minus">-1~2점</span></li>
+      <li>무단 결석 <span class="point-minus">-2점</span></li>
+      <li>교내·외 단체 활동 또는 행사 무단 불참 <span class="point-minus">-2점</span></li>
+      <li>청소 활동에 지속적으로 불성실하게 참여 <span class="point-minus">-2점</span></li>
+      <li>월담(출입문을 사용하지 않고 담 등을 넘어 학교에 출입함) <span class="point-minus">-2점</span></li>
+      <li>학교 허락 없이 티켓 제작·판매·알선 및 행사 참석 <span class="point-minus">-3점</span></li>
+      <li>출입 금지 장소 출입 <span class="point-minus">-3점</span></li>
+      <li>수업시간 중 전자기기 무단 사용 <span class="point-minus">-1점</span></li>
+      <li>사행성 오락(카드·화투·동전치기 등) <span class="point-minus">-3점</span></li>
+      <li>음란물 반입·탐독·시청 <span class="point-minus">-2점</span></li>
+      <li>등교 시 교문 50m 이내 정차 및 하차 <span class="point-minus">-2점</span></li>
+      <li>개인형 이동장치(PM)를 타고 등·하교 <span class="point-minus">-3점</span></li>
+      <li>교내에서 술·담배 소지 또는 단체 활동 시 소지 및 반입 <span class="point-minus">-3점</span></li>
+      <li>교내·외에서 음주 또는 흡연 <span class="point-minus">-3점</span></li>
+      <li>교내에서 껌 또는 쓰레기를 함부로 뱉거나 버림 <span class="point-minus">-1점</span></li>
+      <li>개수대에 음식물 또는 이물질을 버림 <span class="point-minus">-3점</span></li>
+      <li>실내에서 실외화 착용, 실외에서 실내화 착용 <span class="point-minus">-1점</span></li>
+      <li>교내에서 소란 유발(공놀이·말 타기 놀이 등) <span class="point-minus">-1점</span></li>
+      <li>급우 또는 선후배에게 심한 욕설 <span class="point-minus">-2점</span></li>
+      <li>교사 또는 어른에게 불손한 언행 <span class="point-minus">-3점</span></li>
+      <li>교내 비품 및 공공기물 훼손 또는 파손 <span class="point-minus">-3점</span></li>
+      <li>두발 또는 용의규정 위반(파마·염색·귀걸이·피어싱 등) <span class="point-minus">-1점</span></li>
+      <li>복장 규정 위반(교복·신발·모자 등) <span class="point-minus">-1점</span></li>
+      <li>수업 중 면학 분위기 저해(잡담·장난·노래·무단출입 등) <span class="point-minus">-1~2점</span></li>
+      <li>수업 준비 불량 및 과제 불이행 <span class="point-minus">-1~2점</span></li>
+      <li>교육 활동 중 허락받지 않은 무선 이어폰 착용 <span class="point-minus">-2점</span></li>
+      <li>상기 내용에 포함되지 않는 사항 <span class="point-minus">-1~3점</span></li>
 
     </ul>
 
-    <button class="close" onclick="closeDetail(event)">
-      닫기
-    </button>
+    <button class="close" onclick="closeDetail(event)">닫기</button>
 
   </div>
 
@@ -1589,25 +1476,19 @@ footer {
 
 <!-- 09 기타 -->
 
-<div class="card"
-     data-search="기타 분실물 티켓 사행성 음란물 이동장치 음식물 이물질">
+<div class="card" data-search="기타 분실물 티켓 사행성 음란물 이동장치 음식물 이물질">
 
   <div class="icon">09</div>
 
   <h2>기타</h2>
 
-  <p>
-    분실물·행사·기타 생활평점제 규정
-  </p>
+  <p>분실물·행사·기타 생활평점제 규정</p>
 
   <div class="detail">
 
     <strong>기타 관련 상점·벌점</strong>
 
-
-    <div class="section-title">
-      상점
-    </div>
+    <div class="section-title">상점</div>
 
     <ul>
 
@@ -1623,10 +1504,7 @@ footer {
 
     </ul>
 
-
-    <div class="section-title">
-      벌점
-    </div>
+    <div class="section-title">벌점</div>
 
     <ul>
 
@@ -1662,9 +1540,7 @@ footer {
 
     </ul>
 
-    <button class="close" onclick="closeDetail(event)">
-      닫기
-    </button>
+    <button class="close" onclick="closeDetail(event)">닫기</button>
 
   </div>
 
@@ -1672,6 +1548,8 @@ footer {
 
 
 </div>
+
+
 <!-- QUESTION BOX -->
 
 <div class="question-box">
@@ -1694,6 +1572,144 @@ footer {
 
   <button onclick="openQuestionForm()">
     질문 남기기
+  </button>
+
+</div>
+
+
+<!-- MY POINTS -->
+
+<div class="my-points" id="myPoints">
+
+  <div class="my-points-header">
+
+    <div class="my-points-icon">
+      MY
+    </div>
+
+    <h2>
+      내 상점·벌점 기록
+    </h2>
+
+  </div>
+
+  <div class="my-points-description">
+    지금까지 받은 상점과 벌점을 직접 기록하고 관리할 수 있어요.
+    입력한 기록은 이 기기와 브라우저에 저장됩니다.
+  </div>
+
+
+  <div class="point-form">
+
+    <input
+      type="date"
+      id="pointDate">
+
+    <select id="pointType">
+
+      <option value="plus">
+        상점
+      </option>
+
+      <option value="minus">
+        벌점
+      </option>
+
+    </select>
+
+    <input
+      type="text"
+      id="pointContent"
+      placeholder="받은 이유를 입력하세요">
+
+    <input
+      type="number"
+      id="pointScore"
+      min="1"
+      step="1"
+      placeholder="점수">
+
+    <button
+      class="add-point-btn"
+      onclick="addPointRecord()">
+
+      기록 추가
+
+    </button>
+
+  </div>
+
+
+  <div class="point-summary">
+
+    <div class="summary-item">
+
+      <div class="summary-label">
+        상점 총합
+      </div>
+
+      <div
+        class="summary-number"
+        id="plusTotal">
+
+        +0점
+
+      </div>
+
+    </div>
+
+
+    <div class="summary-item">
+
+      <div class="summary-label">
+        벌점 총합
+      </div>
+
+      <div
+        class="summary-number"
+        id="minusTotal">
+
+        -0점
+
+      </div>
+
+    </div>
+
+
+    <div class="summary-item">
+
+      <div class="summary-label">
+        현재 점수
+      </div>
+
+      <div
+        class="summary-number"
+        id="netTotal">
+
+        0점
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="point-history" id="pointHistory">
+
+    <div class="history-empty">
+      아직 기록이 없어요.
+    </div>
+
+  </div>
+
+
+  <button
+    class="clear-history-btn"
+    onclick="clearPointRecords()">
+
+    전체 기록 삭제
+
   </button>
 
 </div>
@@ -1817,9 +1833,7 @@ footer {
 </button>
 
 
-
 <script>
-
 
 /* =========================
    기본 설정
@@ -1828,6 +1842,8 @@ footer {
 let currentFilter = "all";
 
 const FAVORITE_KEY = "ruleFavorites";
+
+const MY_POINTS_KEY = "myPointRecords";
 
 
 /* =========================
@@ -1845,7 +1861,7 @@ function openQuestionForm() {
 
 
 /* =========================
-   즐겨찾기 데이터
+   즐겨찾기
 ========================= */
 
 function getFavorites() {
@@ -1875,17 +1891,13 @@ function saveFavorites(favorites) {
 }
 
 
-/* =========================
-   항목별 즐겨찾기 만들기
-========================= */
-
 function setupRuleFavorites() {
 
   const details =
     document.querySelectorAll(".detail");
 
 
-  details.forEach((detail, detailIndex) => {
+  details.forEach(detail => {
 
     const card =
       detail.closest(".card");
@@ -1900,9 +1912,7 @@ function setupRuleFavorites() {
 
     items.forEach((li, itemIndex) => {
 
-      if (
-        li.querySelector(".item-favorite")
-      ) {
+      if (li.querySelector(".item-favorite")) {
         return;
       }
 
@@ -1937,20 +1947,24 @@ function setupRuleFavorites() {
       const button =
         document.createElement("button");
 
-      button.className = "item-favorite";
+      button.className =
+        "item-favorite";
 
-      button.type = "button";
+      button.type =
+        "button";
+
+      const favorites =
+        getFavorites();
+
 
       button.textContent =
-        getFavorites().includes(key)
+        favorites.includes(key)
           ? "★"
           : "☆";
 
 
-      if (getFavorites().includes(key)) {
-
+      if (favorites.includes(key)) {
         button.classList.add("active");
-
       }
 
 
@@ -1982,10 +1996,6 @@ function setupRuleFavorites() {
 }
 
 
-/* =========================
-   즐겨찾기 변경
-========================= */
-
 function toggleFavorite(key, button) {
 
   let favorites =
@@ -2016,17 +2026,14 @@ function toggleFavorite(key, button) {
 
   saveFavorites(favorites);
 
-
   applyFilters();
+
+  clearHighlights();
 
   highlightSearch();
 
 }
 
-
-/* =========================
-   특정 항목이 즐겨찾기인지 확인
-========================= */
 
 function isFavorite(li) {
 
@@ -2152,7 +2159,7 @@ function searchRules() {
 
 
 /* =========================
-   기존 하이라이트 제거
+   하이라이트 제거
 ========================= */
 
 function clearHighlights() {
@@ -2209,31 +2216,18 @@ function highlightSearch() {
 
 
   if (!keyword) {
-
     return;
-
   }
 
 
   const items =
-    document.querySelectorAll(
-      ".detail li"
-    );
+    document.querySelectorAll(".detail li");
 
 
   items.forEach(li => {
 
-    /*
-      현재 필터에서 보이지 않는 항목은
-      하이라이트하지 않음
-    */
-
-    if (
-      li.style.display === "none"
-    ) {
-
+    if (li.style.display === "none") {
       return;
-
     }
 
 
@@ -2252,24 +2246,12 @@ function highlightSearch() {
             if (
               parent &&
               (
-                parent.classList.contains(
-                  "point-plus"
-                ) ||
-                parent.classList.contains(
-                  "point-minus"
-                ) ||
-                parent.classList.contains(
-                  "item-favorite"
-                ) ||
-                parent.closest(
-                  ".point-plus"
-                ) ||
-                parent.closest(
-                  ".point-minus"
-                ) ||
-                parent.closest(
-                  ".item-favorite"
-                )
+                parent.classList.contains("point-plus") ||
+                parent.classList.contains("point-minus") ||
+                parent.classList.contains("item-favorite") ||
+                parent.closest(".point-plus") ||
+                parent.closest(".point-minus") ||
+                parent.closest(".item-favorite")
               )
             ) {
 
@@ -2332,9 +2314,7 @@ function highlightSearch() {
 
 
         if (index === -1) {
-
           break;
-
         }
 
 
@@ -2356,9 +2336,7 @@ function highlightSearch() {
 
 
         const highlight =
-          document.createElement(
-            "span"
-          );
+          document.createElement("span");
 
 
         highlight.className =
@@ -2384,9 +2362,7 @@ function highlightSearch() {
 
 
       if (!found) {
-
         return;
-
       }
 
 
@@ -2450,9 +2426,10 @@ function setFilter(filter, button) {
 function applyFilters() {
 
   const keyword =
-    document.getElementById(
-      "search"
-    ).value.trim().toLowerCase();
+    document.getElementById("search")
+      .value
+      .trim()
+      .toLowerCase();
 
 
   const cards =
@@ -2465,9 +2442,7 @@ function applyFilters() {
   cards.forEach(card => {
 
     const items =
-      card.querySelectorAll(
-        ".detail li"
-      );
+      card.querySelectorAll(".detail li");
 
 
     let visibleItemCount = 0;
@@ -2476,8 +2451,7 @@ function applyFilters() {
     items.forEach(li => {
 
       const text =
-        li.textContent
-          .toLowerCase();
+        li.textContent.toLowerCase();
 
 
       const hasSearch =
@@ -2486,47 +2460,28 @@ function applyFilters() {
 
 
       const isPlus =
-        !!li.querySelector(
-          ".point-plus"
-        );
+        !!li.querySelector(".point-plus");
 
 
       const isMinus =
-        !!li.querySelector(
-          ".point-minus"
-        );
+        !!li.querySelector(".point-minus");
 
 
       let filterMatch = true;
 
 
-      if (
-        currentFilter === "plus"
-      ) {
-
-        filterMatch =
-          isPlus;
-
+      if (currentFilter === "plus") {
+        filterMatch = isPlus;
       }
 
 
-      if (
-        currentFilter === "minus"
-      ) {
-
-        filterMatch =
-          isMinus;
-
+      if (currentFilter === "minus") {
+        filterMatch = isMinus;
       }
 
 
-      if (
-        currentFilter === "favorite"
-      ) {
-
-        filterMatch =
-          isFavorite(li);
-
+      if (currentFilter === "favorite") {
+        filterMatch = isFavorite(li);
       }
 
 
@@ -2536,24 +2491,15 @@ function applyFilters() {
 
 
       li.style.display =
-        visible
-          ? ""
-          : "none";
+        visible ? "" : "none";
 
 
       if (visible) {
-
         visibleItemCount++;
-
       }
 
     });
 
-
-    /*
-      전체 화면에서 검색어가 없을 때는
-      카드 9개를 모두 보여줌
-    */
 
     if (
       currentFilter === "all" &&
@@ -2564,17 +2510,7 @@ function applyFilters() {
 
       resultCount++;
 
-      return;
-
-    }
-
-
-    /*
-      필터가 적용된 경우
-      실제로 보이는 항목이 있는 카드만 표시
-    */
-
-    if (visibleItemCount > 0) {
+    } else if (visibleItemCount > 0) {
 
       card.style.display = "";
 
@@ -2587,15 +2523,8 @@ function applyFilters() {
     }
 
 
-    /*
-      카드 내부의 소제목도
-      보이는 항목이 없으면 숨김
-    */
-
     const titles =
-      card.querySelectorAll(
-        ".section-title"
-      );
+      card.querySelectorAll(".section-title");
 
 
     titles.forEach(title => {
@@ -2616,9 +2545,7 @@ function applyFilters() {
 
 
         title.style.display =
-          visible
-            ? ""
-            : "none";
+          visible ? "" : "none";
 
       }
 
@@ -2627,36 +2554,23 @@ function applyFilters() {
   });
 
 
-  /*
-    즐겨찾기 필터에서는
-    즐겨찾기 항목 수를 정확하게 표시
-  */
-
-  if (
-    currentFilter === "favorite"
-  ) {
+  if (currentFilter === "favorite") {
 
     resultCount = 0;
 
 
-    document.querySelectorAll(
-      ".detail li"
-    ).forEach(li => {
+    document.querySelectorAll(".detail li")
+      .forEach(li => {
 
-      if (
-        li.style.display !== "none"
-      ) {
+        if (li.style.display !== "none") {
+          resultCount++;
+        }
 
-        resultCount++;
-
-      }
-
-    });
+      });
 
 
-    document.getElementById(
-      "resultCount"
-    ).textContent =
+    document.getElementById("resultCount")
+      .textContent =
       "즐겨찾기 " +
       resultCount +
       "개";
@@ -2666,17 +2580,10 @@ function applyFilters() {
   }
 
 
-  /*
-    상점 / 벌점 필터
-  */
+  if (currentFilter === "plus") {
 
-  if (
-    currentFilter === "plus"
-  ) {
-
-    document.getElementById(
-      "resultCount"
-    ).textContent =
+    document.getElementById("resultCount")
+      .textContent =
       "상점 " +
       countVisibleItems(".point-plus") +
       "개";
@@ -2686,13 +2593,10 @@ function applyFilters() {
   }
 
 
-  if (
-    currentFilter === "minus"
-  ) {
+  if (currentFilter === "minus") {
 
-    document.getElementById(
-      "resultCount"
-    ).textContent =
+    document.getElementById("resultCount")
+      .textContent =
       "벌점 " +
       countVisibleItems(".point-minus") +
       "개";
@@ -2702,24 +2606,18 @@ function applyFilters() {
   }
 
 
-  /*
-    검색 결과
-  */
-
   if (keyword) {
 
-    document.getElementById(
-      "resultCount"
-    ).textContent =
+    document.getElementById("resultCount")
+      .textContent =
       "검색 결과 " +
       resultCount +
       "개";
 
   } else {
 
-    document.getElementById(
-      "resultCount"
-    ).textContent =
+    document.getElementById("resultCount")
+      .textContent =
       "검색 결과 9개";
 
   }
@@ -2727,33 +2625,28 @@ function applyFilters() {
 }
 
 
-/* =========================
-   보이는 항목 개수
-========================= */
-
 function countVisibleItems(selector) {
 
   let count = 0;
 
 
-  document.querySelectorAll(
-    selector
-  ).forEach(point => {
+  document.querySelectorAll(selector)
+    .forEach(point => {
 
-    const li =
-      point.closest("li");
+      const li =
+        point.closest("li");
 
 
-    if (
-      li &&
-      li.style.display !== "none"
-    ) {
+      if (
+        li &&
+        li.style.display !== "none"
+      ) {
 
-      count++;
+        count++;
 
-    }
+      }
 
-  });
+    });
 
 
   return count;
@@ -2767,122 +2660,69 @@ function countVisibleItems(selector) {
 
 function goHome() {
 
-  /*
-    검색 초기화
-  */
+  document.getElementById("search")
+    .value = "";
 
-  document.getElementById(
-    "search"
-  ).value = "";
-
-
-  /*
-    하이라이트 제거
-  */
 
   clearHighlights();
 
 
-  /*
-    필터 초기화
-  */
-
   currentFilter = "all";
 
 
-  document.querySelectorAll(
-    ".filter-btn"
-  ).forEach(btn => {
+  document.querySelectorAll(".filter-btn")
+    .forEach(btn => {
 
-    btn.classList.remove(
-      "active"
-    );
+      btn.classList.remove("active");
 
-  });
+    });
 
 
   const firstFilter =
-    document.querySelector(
-      ".filter-btn"
-    );
+    document.querySelector(".filter-btn");
 
 
   if (firstFilter) {
-
-    firstFilter.classList.add(
-      "active"
-    );
-
+    firstFilter.classList.add("active");
   }
 
 
-  /*
-    모든 카드 표시
-  */
+  document.querySelectorAll(".card")
+    .forEach(card => {
 
-  document.querySelectorAll(
-    ".card"
-  ).forEach(card => {
+      card.style.display = "";
 
-    card.style.display = "";
-
-  });
+    });
 
 
-  /*
-    모든 항목 표시
-  */
+  document.querySelectorAll(".detail li")
+    .forEach(li => {
 
-  document.querySelectorAll(
-    ".detail li"
-  ).forEach(li => {
+      li.style.display = "";
 
-    li.style.display = "";
-
-  });
+    });
 
 
-  /*
-    모든 소제목 표시
-  */
+  document.querySelectorAll(".section-title")
+    .forEach(title => {
 
-  document.querySelectorAll(
-    ".section-title"
-  ).forEach(title => {
+      title.style.display = "";
 
-    title.style.display = "";
-
-  });
+    });
 
 
-  /*
-    열린 상세 내용 닫기
-  */
+  document.querySelectorAll(".detail")
+    .forEach(detail => {
 
-  document.querySelectorAll(
-    ".detail"
-  ).forEach(detail => {
+      detail.classList.remove("show");
 
-    detail.classList.remove(
-      "show"
-    );
-
-  });
+    });
 
 
-  /*
-    결과 개수 초기화
-  */
-
-  document.getElementById(
-    "resultCount"
-  ).textContent =
+  document.getElementById("resultCount")
+    .textContent =
     "검색 결과 9개";
 
-
-  /*
-    맨 위로 이동
-  */
 
   window.scrollTo({
     top: 0,
@@ -2900,17 +2740,13 @@ function calculatePoint() {
 
   const plus =
     Number(
-      document.getElementById(
-        "plusInput"
-      ).value
+      document.getElementById("plusInput").value
     ) || 0;
 
 
   const minus =
     Number(
-      document.getElementById(
-        "minusInput"
-      ).value
+      document.getElementById("minusInput").value
     ) || 0;
 
 
@@ -2919,9 +2755,7 @@ function calculatePoint() {
 
 
   const result =
-    document.getElementById(
-      "calculatorResult"
-    );
+    document.getElementById("calculatorResult");
 
 
   let message = "";
@@ -2959,25 +2793,18 @@ function calculatePoint() {
 }
 
 
-/* =========================
-   계산기 초기화
-========================= */
-
 function resetCalculator() {
 
-  document.getElementById(
-    "plusInput"
-  ).value = 0;
+  document.getElementById("plusInput")
+    .value = 0;
 
 
-  document.getElementById(
-    "minusInput"
-  ).value = 0;
+  document.getElementById("minusInput")
+    .value = 0;
 
 
-  document.getElementById(
-    "calculatorResult"
-  ).innerHTML =
+  document.getElementById("calculatorResult")
+    .innerHTML =
     "현재 점수를 입력하고 계산해보세요.";
 
 }
@@ -2992,21 +2819,15 @@ document.addEventListener(
   function(event) {
 
     const plus =
-      event.target.closest(
-        ".point-plus"
-      );
+      event.target.closest(".point-plus");
 
 
     const minus =
-      event.target.closest(
-        ".point-minus"
-      );
+      event.target.closest(".point-minus");
 
 
     if (!plus && !minus) {
-
       return;
-
     }
 
 
@@ -3017,20 +2838,12 @@ document.addEventListener(
       (plus || minus).textContent;
 
 
-    /*
-      -1~2, +1~3 같은 범위 처리
-    */
-
     const numbers =
-      text.match(
-        /\d+/g
-      );
+      text.match(/\d+/g);
 
 
     if (!numbers) {
-
       return;
-
     }
 
 
@@ -3038,14 +2851,7 @@ document.addEventListener(
       Number(numbers[0]);
 
 
-    /*
-      범위면 가장 큰 값으로 계산
-      예: -1~2 → 2
-    */
-
-    if (
-      numbers.length > 1
-    ) {
+    if (numbers.length > 1) {
 
       value =
         Number(
@@ -3055,21 +2861,10 @@ document.addEventListener(
     }
 
 
-    if (minus) {
-
-      value = -value;
-
-    }
-
-
     const input =
       plus
-        ? document.getElementById(
-            "plusInput"
-          )
-        : document.getElementById(
-            "minusInput"
-          );
+        ? document.getElementById("plusInput")
+        : document.getElementById("minusInput");
 
 
     const current =
@@ -3077,19 +2872,424 @@ document.addEventListener(
 
 
     input.value =
-      current +
-      Math.abs(value);
+      current + Math.abs(value);
 
 
-    document.getElementById(
-      "calculator"
-    ).scrollIntoView({
-      behavior: "smooth",
-      block: "center"
-    });
+    document.getElementById("calculator")
+      .scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+      });
 
   }
 );
+
+
+/* =========================
+   내 상점·벌점 기록
+========================= */
+
+function getPointRecords() {
+
+  try {
+
+    return JSON.parse(
+      localStorage.getItem(MY_POINTS_KEY)
+    ) || [];
+
+  } catch (error) {
+
+    return [];
+
+  }
+
+}
+
+
+function savePointRecords(records) {
+
+  localStorage.setItem(
+    MY_POINTS_KEY,
+    JSON.stringify(records)
+  );
+
+}
+
+
+/* 오늘 날짜 자동 입력 */
+
+function setTodayDate() {
+
+  const input =
+    document.getElementById("pointDate");
+
+
+  const today =
+    new Date();
+
+
+  const year =
+    today.getFullYear();
+
+
+  const month =
+    String(
+      today.getMonth() + 1
+    ).padStart(2, "0");
+
+
+  const day =
+    String(
+      today.getDate()
+    ).padStart(2, "0");
+
+
+  input.value =
+    year +
+    "-" +
+    month +
+    "-" +
+    day;
+
+}
+
+
+/* 기록 추가 */
+
+function addPointRecord() {
+
+  const date =
+    document.getElementById("pointDate")
+      .value;
+
+
+  const type =
+    document.getElementById("pointType")
+      .value;
+
+
+  const content =
+    document.getElementById("pointContent")
+      .value
+      .trim();
+
+
+  const score =
+    Number(
+      document.getElementById("pointScore")
+        .value
+    );
+
+
+  if (!date) {
+
+    alert("날짜를 입력해주세요.");
+
+    return;
+
+  }
+
+
+  if (!content) {
+
+    alert("받은 이유를 입력해주세요.");
+
+    return;
+
+  }
+
+
+  if (
+    !score ||
+    score <= 0
+  ) {
+
+    alert("점수는 1점 이상 입력해주세요.");
+
+    return;
+
+  }
+
+
+  const record = {
+
+    id:
+      Date.now(),
+
+    date:
+      date,
+
+    type:
+      type,
+
+    content:
+      content,
+
+    score:
+      score
+
+  };
+
+
+  const records =
+    getPointRecords();
+
+
+  records.push(record);
+
+
+  savePointRecords(records);
+
+
+  document.getElementById("pointContent")
+    .value = "";
+
+
+  document.getElementById("pointScore")
+    .value = "";
+
+
+  renderPointRecords();
+
+}
+
+
+/* 기록 표시 */
+
+function renderPointRecords() {
+
+  const records =
+    getPointRecords();
+
+
+  const history =
+    document.getElementById("pointHistory");
+
+
+  let plusTotal = 0;
+
+  let minusTotal = 0;
+
+
+  records.forEach(record => {
+
+    if (record.type === "plus") {
+
+      plusTotal +=
+        Number(record.score);
+
+    } else {
+
+      minusTotal +=
+        Number(record.score);
+
+    }
+
+  });
+
+
+  const netTotal =
+    plusTotal - minusTotal;
+
+
+  document.getElementById("plusTotal")
+    .textContent =
+    "+" +
+    plusTotal +
+    "점";
+
+
+  document.getElementById("minusTotal")
+    .textContent =
+    "-" +
+    minusTotal +
+    "점";
+
+
+  document.getElementById("netTotal")
+    .textContent =
+    (netTotal > 0 ? "+" : "") +
+    netTotal +
+    "점";
+
+
+  if (records.length === 0) {
+
+    history.innerHTML =
+      '<div class="history-empty">' +
+      "아직 기록이 없어요." +
+      "</div>";
+
+    return;
+
+  }
+
+
+  records.sort(
+    (a, b) => {
+
+      return (
+        new Date(b.date) -
+        new Date(a.date)
+      );
+
+    }
+  );
+
+
+  history.innerHTML = "";
+
+
+  records.forEach(record => {
+
+    const item =
+      document.createElement("div");
+
+
+    item.className =
+      "history-item";
+
+
+    const date =
+      document.createElement("div");
+
+
+    date.className =
+      "history-date";
+
+
+    date.textContent =
+      record.date;
+
+
+    const content =
+      document.createElement("div");
+
+
+    content.className =
+      "history-content";
+
+
+    content.textContent =
+      record.content;
+
+
+    const score =
+      document.createElement("div");
+
+
+    score.className =
+      "history-score " +
+      (
+        record.type === "plus"
+          ? "plus"
+          : "minus"
+      );
+
+
+    score.textContent =
+      (
+        record.type === "plus"
+          ? "+"
+          : "-"
+      ) +
+      record.score +
+      "점";
+
+
+    const deleteButton =
+      document.createElement("button");
+
+
+    deleteButton.className =
+      "delete-history";
+
+
+    deleteButton.textContent =
+      "삭제";
+
+
+    deleteButton.onclick =
+      function() {
+
+        deletePointRecord(
+          record.id
+        );
+
+      };
+
+
+    item.appendChild(date);
+
+    item.appendChild(content);
+
+    item.appendChild(score);
+
+    item.appendChild(deleteButton);
+
+
+    history.appendChild(item);
+
+  });
+
+}
+
+
+/* 기록 하나 삭제 */
+
+function deletePointRecord(id) {
+
+  const records =
+    getPointRecords();
+
+
+  const newRecords =
+    records.filter(
+      record => record.id !== id
+    );
+
+
+  savePointRecords(newRecords);
+
+  renderPointRecords();
+
+}
+
+
+/* 전체 기록 삭제 */
+
+function clearPointRecords() {
+
+  const records =
+    getPointRecords();
+
+
+  if (records.length === 0) {
+
+    return;
+
+  }
+
+
+  const answer =
+    confirm(
+      "내 상점·벌점 기록을 모두 삭제할까요?"
+    );
+
+
+  if (!answer) {
+    return;
+  }
+
+
+  localStorage.removeItem(
+    MY_POINTS_KEY
+  );
+
+
+  renderPointRecords();
+
+}
 
 
 /* =========================
@@ -3101,14 +3301,10 @@ window.addEventListener(
   function() {
 
     const button =
-      document.getElementById(
-        "topButton"
-      );
+      document.getElementById("topButton");
 
 
-    if (
-      window.scrollY > 500
-    ) {
+    if (window.scrollY > 500) {
 
       button.style.display =
         "block";
@@ -3123,10 +3319,6 @@ window.addEventListener(
   }
 );
 
-
-/* =========================
-   맨 위로
-========================= */
 
 function scrollToTop() {
 
@@ -3144,11 +3336,13 @@ function scrollToTop() {
 
 setupRuleFavorites();
 
+setTodayDate();
+
+renderPointRecords();
+
 applyFilters();
 
-
 </script>
-
 
 </body>
 </html>
