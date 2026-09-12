@@ -1,373 +1,39 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>혜성여고 교칙 안내</title>
-
-<style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, "Noto Sans KR", sans-serif;
-  background: #f5f7fb;
-  color: #172033;
-}
-
-header {
-  background: white;
-  padding: 22px 20px;
-  border-bottom: 1px solid #e7eaf0;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.header-inner {
-  max-width: 900px;
-  margin: auto;
-  font-size: 20px;
-  font-weight: 800;
-  color: #1d3557;
-}
-
-.hero {
-  max-width: 900px;
-  margin: 45px auto 25px;
-  padding: 0 20px;
-}
-
-.hero h1 {
-  font-size: 38px;
-  margin-bottom: 12px;
-  color: #172033;
-}
-
-.hero p {
-  color: #687386;
-  line-height: 1.6;
-}
-
-.search-box {
-  max-width: 900px;
-  margin: 0 auto 30px;
-  padding: 0 20px;
-}
-
-.search-box input {
-  width: 100%;
-  padding: 17px 20px;
-  border: 1px solid #dfe4ec;
-  border-radius: 15px;
-  font-size: 16px;
-  outline: none;
-  background: white;
-}
-
-.search-box input:focus {
-  border-color: #668dc5;
-}
-
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 0 20px 50px;
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
-}
-
-.card {
-  background: white;
-  border-radius: 20px;
-  padding: 24px;
-  border: 1px solid #e8ebf1;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(30, 50, 80, 0.08);
-}
-
-.icon {
-  font-size: 27px;
-  margin-bottom: 13px;
-}
-
-.card h2 {
-  margin: 0 0 8px;
-  font-size: 20px;
-}
-
-.card p {
-  margin: 0;
-  color: #707b8d;
-  line-height: 1.5;
-  font-size: 14px;
-}
-
-.detail {
-  display: none;
-  margin-top: 18px;
-  background: #f8faff;
-  border-radius: 16px;
-  padding: 20px;
-  line-height: 1.7;
-  color: #3d485b;
-}
-
-.detail.show {
-  display: block;
-}
-
-.detail ul {
-  padding-left: 20px;
-  margin: 5px 0 0;
-}
-
-.detail li {
-  margin-bottom: 8px;
-}
-
-.close {
-  margin-top: 15px;
-  border: none;
-  background: #1d3557;
-  color: white;
-  padding: 9px 15px;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.notice {
-  margin-top: 25px;
-  background: #eef4fc;
-  border-radius: 16px;
-  padding: 18px;
-  color: #53647d;
-  font-size: 13px;
-  line-height: 1.6;
-}
-
-footer {
-  text-align: center;
-  padding: 25px;
-  color: #8a93a2;
-  font-size: 12px;
-}
-
-@media (max-width: 650px) {
-  .cards {
-    grid-template-columns: 1fr;
-  }
-
-  .hero h1 {
-    font-size: 30px;
-  }
-}
-</style>
-</head>
-
-<body>
-
-<header>
-  <div class="header-inner">혜성여고 교칙 안내</div>
-</header>
-
-<section class="hero">
-  <h1>학생들을 위한<br>교칙 안내</h1>
-  <p>
-    복잡한 학교생활 규정을 학생들이 쉽게 확인할 수 있도록 정리했어요.
-  </p>
-</section>
-
-<div class="search-box">
-  <input
-    type="text"
-    id="search"
-    placeholder="🔍 교칙 검색하기"
-    onkeyup="searchRules()"
-  >
-</div>
-
-<main class="container">
-  <div class="cards" id="cards">
-
-    <!-- 출결 -->
-    <div class="card" data-search="출결 결석 지각 조퇴 결과 무단 외출">
-      <div class="icon">📚</div>
-      <h2>출결</h2>
-      <p>결석·지각·조퇴·결과 등 출결 관련 규정</p>
-
+<!-- 상점 (생활평점제) -->
+    <div class="card" data-search="상점 봉사 환경미화 준법 명예선양 예절 공중도덕 출결 수업태도 선행 신고 포상">
+      <div class="icon">⭐</div>
+      <h2 style="color: #2b70c9;">상점 규정</h2>
+      <p>환경미화, 준법, 명예선양, 예절 등 상점 부여 항목 안내</p>
       <div class="detail">
-        <strong>출결 관련 주요 규정</strong>
+        <strong>주요 상점 규정 안내</strong>
         <ul>
-          <li>무단 결석, 지각, 조퇴, 결과 및 외출은 규정에 따라 처리됩니다.</li>
-          <li>정당한 사유 없이 반복적으로 결석하거나 장기간 결석하는 경우 별도의 조치가 이루어질 수 있습니다.</li>
-          <li>학교에서 정한 출결 절차를 지켜야 합니다.</li>
+          <li><strong>환경미화 및 봉사:</strong> 단체·행사 솔선수범(1점), 청소 성실 참여(1점), 학급 비품/도우미(1~2점), 장애학생 도우미(3점)</li>
+          <li><strong>준법의식:</strong> 비품 훼손/안전사고 신고(2점), 외부인 무단출입 신고(2점), 흡연/음주/학교폭력 신고(5점), 분실물 습득(1점)</li>
+          <li><strong>명예선양 및 예절:</strong> 선행 제보(3점), 언론 보도(5점), 인사/언어/용의복장 모범(각 1점)</li>
+          <li><strong>출결 및 수업:</strong> 학급 1학기 무결석(3점), 수업준비/과제/수업태도 모범(각 1점)</li>
         </ul>
         <button class="close" onclick="closeDetail(event)">닫기</button>
       </div>
     </div>
 
-    <!-- 복장 -->
-    <div class="card" data-search="복장 용의 머리 염색 파마 교복 슬리퍼 크록스 신발">
-      <div class="icon">👔</div>
-      <h2>복장·용의</h2>
-      <p>교복·머리·신발 등 학교생활에 필요한 복장 규정</p>
-
+    <!-- 벌점 (생활평점제) -->
+    <div class="card" data-search="벌점 지각 결과 조퇴 외출 결석 월담 전자기기 개인형이동장치 PM 술 담배 흡연 음주 욕설 두발 용의 복장 훼손">
+      <div class="icon">⚠️</div>
+      <h2 style="color: #d9534f;">벌점 규정</h2>
+      <p>출결, 준법, 흡연·음주, 용의복장 등 벌점 부여 항목 안내</p>
       <div class="detail">
-        <strong>복장·용의 주요 규정</strong>
+        <strong>주요 벌점 규정 안내</strong>
         <ul>
-          <li>등교·하교 및 학교생활 중 학교에서 지정한 복장을 착용합니다.</li>
-          <li>교복의 기본 디자인을 임의로 변경하지 않습니다.</li>
-          <li>학교 표지는 지정된 위치에 유지합니다.</li>
-          <li>염색과 파마는 허용되지 않습니다.</li>
-          <li>등교 시 슬리퍼·크록스 등은 착용하지 않습니다.</li>
-          <li>체육 시간에는 체육복과 체육 활동에 적합한 신발을 착용합니다.</li>
+          <li><strong>출결 및 단체활동:</strong> 무단 지각/결과/조퇴/외출(1~2점), 무단 결석(2점), 행사 무단 불참(2점)</li>
+          <li><strong>준법 및 안전:</strong> 월담(2점), 수업 중 전자기기 무단 사용(1점), 등교 시 교문 50m 이내 정차(2점), PM(개인형 이동장치) 등하교(3점), 출입금지 구역 출입(3점)</li>
+          <li><strong>흡연·음주 및 공중도덕:</strong> 교내외 음주/흡연 또는 술·담배 소지(3점), 쓰레기 투기(1점), 교사 불손 언행(3점), 심한 욕설(2점), 기물 훼손(3점)</li>
+          <li><strong>두발·복장 및 학습:</strong> 두발·용의규정(파마, 염색, 귀걸이, 피어싱 등) 위반(1점), 복장 규정 위반(1점), 면학 분위기 저해/과제 미제출(1~2점), 허락 없이 무선 이어폰 착용(2점)</li>
         </ul>
+        <div style="margin-top: 12px; padding: 10px; background: #fff0f0; border-radius: 8px; font-size: 13px; color: #c0392b;">
+          📌 <strong>점수 관리 안내</strong><br>
+          • <strong>벌점 10점 이상:</strong> 회복교육프로그램(교내 봉사 및 상담) 실시<br>
+          • <strong>벌점 20점 이상:</strong> 생활교육위원회 회부 및 징계<br>
+          • <strong>상점 20점 이상:</strong> 모범 학생 선정 (학생부 작성 근거 활용)
+        </div>
         <button class="close" onclick="closeDetail(event)">닫기</button>
       </div>
     </div>
-
-    <!-- 스마트기기 -->
-    <div class="card" data-search="스마트기기 휴대폰 핸드폰 스마트폰 수업 시험">
-      <div class="icon">📱</div>
-      <h2>스마트기기</h2>
-      <p>휴대전화 및 스마트기기 사용 관련 규정</p>
-
-      <div class="detail">
-        <strong>스마트기기 주요 규정</strong>
-        <ul>
-          <li>수업 중 휴대전화 등 스마트기기를 사용할 수 없습니다.</li>
-          <li>교육 목적이나 긴급한 상황에서 학교의 허가가 있는 경우에는 사용할 수 있습니다.</li>
-          <li>시험 기간에는 학교에서 정한 방법에 따라 스마트기기를 제출합니다.</li>
-          <li>스마트기기 사용 규정을 반복적으로 위반할 경우 생활교육 규정에 따라 처리될 수 있습니다.</li>
-        </ul>
-        <button class="close" onclick="closeDetail(event)">닫기</button>
-      </div>
-    </div>
-
-    <!-- 교내생활 -->
-    <div class="card" data-search="교내생활 복도 뛰기 오른쪽 외투 청소 쓰레기 급식 공공시설">
-      <div class="icon">🏫</div>
-      <h2>교내생활</h2>
-      <p>복도·교실·청소·시설 이용 등 학교생활 기본 규칙</p>
-
-      <div class="detail">
-        <strong>교내생활 주요 규정</strong>
-        <ul>
-          <li>복도에서는 우측으로 통행하며 뛰지 않습니다.</li>
-          <li>복도에서 큰 소리를 내거나 신발을 끌며 이동하지 않습니다.</li>
-          <li>교실 안에서는 겉옷을 벗는 것을 원칙으로 합니다.</li>
-          <li>정해진 청소 시간에 함께 청소합니다.</li>
-          <li>학교 시설과 공공 물품을 소중히 사용합니다.</li>
-          <li>쓰레기는 종류에 맞게 분리하여 버립니다.</li>
-          <li>다른 학생의 학습이나 휴식을 방해하지 않습니다.</li>
-        </ul>
-        <button class="close" onclick="closeDetail(event)">닫기</button>
-      </div>
-    </div>
-
-    <!-- 안전 -->
-    <div class="card" data-search="안전 학교폭력 폭력 갈등 건강 권리">
-      <div class="icon">🛡️</div>
-      <h2>안전·학교폭력</h2>
-      <p>학생의 안전과 서로를 존중하는 학교생활</p>
-
-      <div class="detail">
-        <strong>안전·학교폭력 관련 안내</strong>
-        <ul>
-          <li>학교생활에서는 서로의 인권과 존엄을 존중합니다.</li>
-          <li>학생 간 갈등이 발생했을 경우 적절한 절차를 통해 해결하도록 합니다.</li>
-          <li>학교폭력 사안이 발생하면 학교의 정해진 절차에 따라 조사와 처리가 이루어집니다.</li>
-          <li>학교는 피해 학생의 보호와 가해 학생에 대한 교육 및 조치를 진행할 수 있습니다.</li>
-        </ul>
-        <button class="close" onclick="closeDetail(event)">닫기</button>
-      </div>
-    </div>
-
-    <!-- 기타 -->
-    <div class="card" data-search="기타 언어 욕설 식사 분실물 소지품 학생증 외출">
-      <div class="icon">📌</div>
-      <h2>기타</h2>
-      <p>언어생활·식사·분실물 등 알아두면 좋은 규정</p>
-
-      <div class="detail">
-        <strong>기타 주요 규정</strong>
-        <ul>
-          <li>상대방을 존중하는 바른 언어를 사용합니다.</li>
-          <li>욕설·비속어 등을 사용하지 않습니다.</li>
-          <li>식사는 정해진 시간과 장소에서 조용히 합니다.</li>
-          <li>개인 소지품에는 학번과 이름 등을 표시합니다.</li>
-          <li>습득한 물건은 학생생활지도 관련 부서에 전달합니다.</li>
-          <li>학교 밖에서도 학생으로서 안전에 유의하고 학교 규정을 지킵니다.</li>
-        </ul>
-        <button class="close" onclick="closeDetail(event)">닫기</button>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="notice">
-    💡 이 페이지는 학생들이 교칙을 쉽게 확인할 수 있도록 주요 내용을 간단하게 정리한 안내 페이지입니다.
-    정확한 내용은 학교의 공식 학생 생활규정을 확인해주세요.
-    <br><br>
-    📅 학생 생활규정 2026년 9월 4일 개정 시행
-  </div>
-</main>
-
-<footer>
-  혜성여자고등학교 학생 생활규정 안내
-</footer>
-
-<script>
-const cards = document.querySelectorAll(".card");
-
-cards.forEach(card => {
-  card.addEventListener("click", function(e) {
-    if (e.target.classList.contains("close")) return;
-
-    const detail = this.querySelector(".detail");
-
-    document.querySelectorAll(".detail").forEach(d => {
-      if (d !== detail) {
-        d.classList.remove("show");
-      }
-    });
-
-    detail.classList.toggle("show");
-  });
-});
-
-function closeDetail(event) {
-  event.stopPropagation();
-  event.target.parentElement.classList.remove("show");
-}
-
-function searchRules() {
-  const input = document.getElementById("search").value.toLowerCase();
-
-  cards.forEach(card => {
-    const text = card.innerText.toLowerCase();
-    const keywords = card.dataset.search.toLowerCase();
-
-    if (text.includes(input) || keywords.includes(input)) {
-      card.style.display = "";
-    } else {
-      card.style.display = "none";
-    }
-  });
-}
-</script>
-
-</body>
-</html>
