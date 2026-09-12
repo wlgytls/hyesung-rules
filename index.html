@@ -6,6 +6,7 @@
 <title>혜성여고 교칙 안내</title>
 
 <style>
+
 * {
   box-sizing: border-box;
 }
@@ -245,7 +246,7 @@ header {
 }
 
 .card h2 {
-  margin: 0 45px 8px 0;
+  margin: 0 0 8px;
   font-size: 19px;
   letter-spacing: -0.3px;
 }
@@ -259,31 +260,41 @@ header {
 
 
 /* =========================
-   FAVORITE
+   ITEM FAVORITE
 ========================= */
 
-.favorite {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  border: 1px solid #e3e8ef;
-  background: #f8fafc;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
+.rule-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 10px;
+}
+
+.rule-text {
+  flex: 1;
+}
+
+.item-favorite {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #dfe5ed;
+  background: white;
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 18px;
-  line-height: 36px;
+  font-size: 16px;
+  line-height: 28px;
   padding: 0;
+  color: #8b96a6;
   transition: 0.2s;
 }
 
-.favorite:hover {
-  transform: scale(1.08);
+.item-favorite:hover {
   background: #f2f6fb;
+  transform: scale(1.06);
 }
 
-.favorite.active {
+.item-favorite.active {
   background: #e5eef8;
   border-color: #c8d9ea;
   color: #244c75;
@@ -691,16 +702,22 @@ footer {
   .question-box button {
     width: 100%;
   }
+
+  .rule-item {
+    align-items: flex-start;
+  }
+
+  .item-favorite {
+    margin-top: 2px;
+  }
+
 }
+
 </style>
 </head>
 
 
 <body>
-
-<!-- =========================
-     HEADER
-========================= -->
 
 <header>
 
@@ -727,10 +744,6 @@ HOME
 </header>
 
 
-<!-- =========================
-     HERO
-========================= -->
-
 <section class="hero" id="home">
 
 <div class="hero-label">
@@ -749,10 +762,6 @@ HOME
 </section>
 
 
-<!-- =========================
-     SEARCH
-========================= -->
-
 <div class="search-box">
 
 <div class="search-wrapper">
@@ -768,10 +777,6 @@ onkeyup="searchRules()"
 
 </div>
 
-
-<!-- =========================
-     FILTER
-========================= -->
 
 <div class="filter-box">
 
@@ -803,25 +808,18 @@ onclick="setFilter('favorite', this)">
 </div>
 
 
-<!-- =========================
-     CONTENT
-========================= -->
-
 <main class="container">
 
 <div class="cards" id="cards">
 
 
-<!-- 출결 -->
+<!-- =========================
+     출결
+========================= -->
 
 <div class="card"
 data-type="both"
 data-search="출결 결석 지각 조퇴 결과 무단 외출 행사 불참">
-
-<button class="favorite"
-onclick="toggleFavorite(event, this)">
-☆
-</button>
 
 <div class="icon">01</div>
 
@@ -876,16 +874,13 @@ onclick="closeDetail(event)">
 </div>
 
 
-<!-- 복장 -->
+<!-- =========================
+     복장
+========================= -->
 
 <div class="card"
 data-type="both"
 data-search="복장 용의 머리 염색 파마 귀걸이 피어싱 교복 신발 모자">
-
-<button class="favorite"
-onclick="toggleFavorite(event, this)">
-☆
-</button>
 
 <div class="icon">02</div>
 
@@ -940,16 +935,13 @@ onclick="closeDetail(event)">
 </div>
 
 
-<!-- 스마트기기 -->
+<!-- =========================
+     스마트기기
+========================= -->
 
 <div class="card"
 data-type="minus"
 data-search="스마트기기 휴대폰 핸드폰 스마트폰 전자기기 무선 이어폰">
-
-<button class="favorite"
-onclick="toggleFavorite(event, this)">
-☆
-</button>
 
 <div class="icon">03</div>
 
@@ -988,16 +980,13 @@ onclick="closeDetail(event)">
 </div>
 
 
-<!-- 교내생활 -->
+<!-- =========================
+     교내생활
+========================= -->
 
 <div class="card"
 data-type="both"
 data-search="교내생활 청소 비품 공공기물 쓰레기 개수대 음식물 공놀이 소란 출입금지 장소 월담">
-
-<button class="favorite"
-onclick="toggleFavorite(event, this)">
-☆
-</button>
 
 <div class="icon">04</div>
 
@@ -1087,16 +1076,13 @@ onclick="closeDetail(event)">
 </div>
 
 
-<!-- 안전 -->
+<!-- =========================
+     안전
+========================= -->
 
 <div class="card"
 data-type="both"
 data-search="안전 학교폭력 폭력 안전사고 흡연 음주 신고 외부인 비품 고장 훼손">
-
-<button class="favorite"
-onclick="toggleFavorite(event, this)">
-☆
-</button>
 
 <div class="icon">05</div>
 
@@ -1166,16 +1152,13 @@ onclick="closeDetail(event)">
 </div>
 
 
-<!-- 예절 -->
+<!-- =========================
+     예절
+========================= -->
 
 <div class="card"
 data-type="both"
 data-search="예절 인사 고운말 욕설 불손 언행 교사 어른 급우 선후배 수업태도">
-
-<button class="favorite"
-onclick="toggleFavorite(event, this)">
-☆
-</button>
 
 <div class="icon">06</div>
 
@@ -1270,16 +1253,13 @@ onclick="closeDetail(event)">
 </div>
 
 
-<!-- 전체 상점 -->
+<!-- =========================
+     전체 상점
+========================= -->
 
 <div class="card"
 data-type="plus"
 data-search="상점 상점항목 선행 모범 역할 행사 청소 비품 도우미 인사 고운말 수업">
-
-<button class="favorite"
-onclick="toggleFavorite(event, this)">
-☆
-</button>
 
 <div class="icon">07</div>
 
@@ -1328,16 +1308,13 @@ onclick="closeDetail(event)">
 </div>
 
 
-<!-- 전체 벌점 -->
+<!-- =========================
+     전체 벌점
+========================= -->
 
 <div class="card"
 data-type="minus"
 data-search="벌점 벌점항목 지각 결석 행사 청소 월담 출입 티켓 사행성 음란물 술 담배 쓰레기 욕설 파손 염색 교복 이어폰">
-
-<button class="favorite"
-onclick="toggleFavorite(event, this)">
-☆
-</button>
 
 <div class="icon">08</div>
 
@@ -1392,16 +1369,13 @@ onclick="closeDetail(event)">
 </div>
 
 
-<!-- 기타 -->
+<!-- =========================
+     기타
+========================= -->
 
 <div class="card"
 data-type="both"
 data-search="기타 분실물 티켓 사행성 음란물 이동장치 음식물 이물질">
-
-<button class="favorite"
-onclick="toggleFavorite(event, this)">
-☆
-</button>
 
 <div class="icon">09</div>
 
@@ -1546,7 +1520,6 @@ value="0"
 
 </div>
 
-
 <div class="calc-item">
 
 <label>
@@ -1564,20 +1537,17 @@ value="0"
 
 </div>
 
-
 <button
 class="calculate-btn"
 onclick="calculatePoints()">
 계산하기
 </button>
 
-
 <button
 class="reset-btn"
 onclick="resetCalculator()">
 초기화
 </button>
-
 
 <div
 class="calculator-result"
@@ -1632,10 +1602,10 @@ const QUESTION_FORM_URL =
 
 function openQuestionForm() {
 
-window.open(
-QUESTION_FORM_URL,
-"_blank"
-);
+  window.open(
+    QUESTION_FORM_URL,
+    "_blank"
+  );
 
 }
 
@@ -1651,37 +1621,265 @@ let currentFilter = "all";
 
 
 /* =========================
+   교칙 항목에 즐겨찾기 버튼 자동 추가
+========================= */
+
+function setupRuleFavorites() {
+
+  document
+    .querySelectorAll(".detail li")
+    .forEach((item, index) => {
+
+      if (
+        item.querySelector(".item-favorite")
+      ) {
+        return;
+      }
+
+      const point =
+        item.querySelector(
+          ".point-plus, .point-minus"
+        );
+
+      if (!point) return;
+
+      const originalText =
+        item.textContent
+          .replace(point.textContent, "")
+          .trim();
+
+      const card =
+        item.closest(".card");
+
+      const cardName =
+        card.querySelector("h2").textContent;
+
+      const type =
+        point.classList.contains("point-plus")
+          ? "상점"
+          : "벌점";
+
+      const ruleName =
+        cardName +
+        "|" +
+        type +
+        "|" +
+        originalText;
+
+      item.classList.add("rule-item");
+
+      const wrapper =
+        document.createElement("span");
+
+      wrapper.className =
+        "rule-text";
+
+      while (item.firstChild) {
+
+        const child =
+          item.firstChild;
+
+        item.removeChild(child);
+
+        wrapper.appendChild(child);
+
+        if (child === point) {
+          break;
+        }
+
+      }
+
+      item.appendChild(wrapper);
+
+      const button =
+        document.createElement("button");
+
+      button.className =
+        "item-favorite";
+
+      button.textContent = "☆";
+
+      button.setAttribute(
+        "data-rule",
+        ruleName
+      );
+
+      button.onclick =
+        function(event) {
+
+          toggleItemFavorite(
+            event,
+            this
+          );
+
+        };
+
+      item.appendChild(button);
+
+    });
+
+}
+
+
+/* =========================
+   항목별 즐겨찾기
+========================= */
+
+function toggleItemFavorite(
+  event,
+  button
+) {
+
+  event.stopPropagation();
+
+  const ruleName =
+    button.dataset.rule;
+
+  let favorites =
+    JSON.parse(
+      localStorage.getItem(
+        "ruleFavorites"
+      ) || "[]"
+    );
+
+  if (
+    favorites.includes(ruleName)
+  ) {
+
+    favorites =
+      favorites.filter(
+        name => name !== ruleName
+      );
+
+    button.textContent = "☆";
+
+    button.classList.remove(
+      "active"
+    );
+
+  } else {
+
+    favorites.push(ruleName);
+
+    button.textContent = "★";
+
+    button.classList.add(
+      "active"
+    );
+
+  }
+
+  localStorage.setItem(
+    "ruleFavorites",
+    JSON.stringify(favorites)
+  );
+
+  if (
+    currentFilter === "favorite"
+  ) {
+
+    applyFilters();
+
+  }
+
+}
+
+
+/* =========================
+   즐겨찾기 불러오기
+========================= */
+
+function loadItemFavorites() {
+
+  const favorites =
+    JSON.parse(
+      localStorage.getItem(
+        "ruleFavorites"
+      ) || "[]"
+    );
+
+  document
+    .querySelectorAll(
+      ".item-favorite"
+    )
+    .forEach(button => {
+
+      const ruleName =
+        button.dataset.rule;
+
+      if (
+        favorites.includes(ruleName)
+      ) {
+
+        button.textContent = "★";
+
+        button.classList.add(
+          "active"
+        );
+
+      }
+
+    });
+
+}
+
+
+/* =========================
    카드 클릭
 ========================= */
 
 cards.forEach(card => {
 
-card.addEventListener("click", function(e) {
+  card.addEventListener(
+    "click",
+    function(e) {
 
-if (
-e.target.classList.contains("close") ||
-e.target.classList.contains("favorite") ||
-e.target.classList.contains("point-plus") ||
-e.target.classList.contains("point-minus")
-) {
-return;
-}
+      if (
+        e.target.classList.contains(
+          "close"
+        ) ||
+        e.target.classList.contains(
+          "item-favorite"
+        ) ||
+        e.target.classList.contains(
+          "point-plus"
+        ) ||
+        e.target.classList.contains(
+          "point-minus"
+        )
+      ) {
 
-const detail =
-this.querySelector(".detail");
+        return;
 
-document.querySelectorAll(".detail")
-.forEach(d => {
+      }
 
-if (d !== detail) {
-d.classList.remove("show");
-}
+      const detail =
+        this.querySelector(
+          ".detail"
+        );
 
-});
+      document
+        .querySelectorAll(
+          ".detail"
+        )
+        .forEach(d => {
 
-detail.classList.toggle("show");
+          if (d !== detail) {
 
-});
+            d.classList.remove(
+              "show"
+            );
+
+          }
+
+        });
+
+      detail.classList.toggle(
+        "show"
+      );
+
+    }
+  );
 
 });
 
@@ -1691,103 +1889,127 @@ detail.classList.toggle("show");
 ========================= */
 
 document
-.querySelectorAll(".point-plus, .point-minus")
-.forEach(point => {
+  .querySelectorAll(
+    ".point-plus, .point-minus"
+  )
+  .forEach(point => {
 
-point.addEventListener("click", function(event) {
+    point.addEventListener(
+      "click",
+      function(event) {
 
-event.stopPropagation();
+        event.stopPropagation();
 
-const text =
-this.textContent.trim();
+        const text =
+          this.textContent.trim();
 
-const isPlus =
-this.classList.contains("point-plus");
+        const isPlus =
+          this.classList.contains(
+            "point-plus"
+          );
 
-const numbers =
-text.match(/\d+/g);
+        const numbers =
+          text.match(/\d+/g);
 
-if (!numbers) return;
+        if (!numbers) return;
 
-let value;
+        let value;
 
-if (numbers.length >= 2) {
+        if (numbers.length >= 2) {
 
-const min =
-Number(numbers[0]);
+          const min =
+            Number(numbers[0]);
 
-const max =
-Number(numbers[1]);
+          const max =
+            Number(numbers[1]);
 
-let selected =
-prompt(
-"몇 점을 추가할까요?\n" +
-min + "점 ~ " +
-max + "점 중 입력해주세요."
-);
+          let selected =
+            prompt(
+              "몇 점을 추가할까요?\n" +
+              min +
+              "점 ~ " +
+              max +
+              "점 중 입력해주세요."
+            );
 
-if (selected === null) return;
+          if (
+            selected === null
+          ) {
+            return;
+          }
 
-selected =
-Number(selected);
+          selected =
+            Number(selected);
 
-if (
-isNaN(selected) ||
-selected < min ||
-selected > max
-) {
+          if (
+            isNaN(selected) ||
+            selected < min ||
+            selected > max
+          ) {
 
-alert(
-min + "점부터 " +
-max + "점 사이의 숫자를 입력해주세요."
-);
+            alert(
+              min +
+              "점부터 " +
+              max +
+              "점 사이의 숫자를 입력해주세요."
+            );
 
-return;
+            return;
 
-}
+          }
 
-value = selected;
+          value = selected;
 
-} else {
+        } else {
 
-value =
-Number(numbers[0]);
+          value =
+            Number(numbers[0]);
 
-}
-
-
-if (isPlus) {
-
-const input =
-document.getElementById("plusPoint");
-
-input.value =
-Number(input.value || 0) + value;
-
-} else {
-
-const input =
-document.getElementById("minusPoint");
-
-input.value =
-Number(input.value || 0) + value;
-
-}
+        }
 
 
-calculatePoints();
+        if (isPlus) {
+
+          const input =
+            document.getElementById(
+              "plusPoint"
+            );
+
+          input.value =
+            Number(
+              input.value || 0
+            ) + value;
+
+        } else {
+
+          const input =
+            document.getElementById(
+              "minusPoint"
+            );
+
+          input.value =
+            Number(
+              input.value || 0
+            ) + value;
+
+        }
 
 
-document
-.getElementById("calculator")
-.scrollIntoView({
-behavior: "smooth",
-block: "start"
-});
+        calculatePoints();
 
-});
+        document
+          .getElementById(
+            "calculator"
+          )
+          .scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
 
-});
+      }
+    );
+
+  });
 
 
 /* =========================
@@ -1796,102 +2018,12 @@ block: "start"
 
 function closeDetail(event) {
 
-event.stopPropagation();
+  event.stopPropagation();
 
-event.target
-.parentElement
-.classList
-.remove("show");
-
-}
-
-
-/* =========================
-   즐겨찾기
-========================= */
-
-function toggleFavorite(event, button) {
-
-event.stopPropagation();
-
-const card =
-button.closest(".card");
-
-const cardName =
-card.querySelector("h2").textContent;
-
-let favorites =
-JSON.parse(
-localStorage.getItem("favorites") || "[]"
-);
-
-
-if (favorites.includes(cardName)) {
-
-favorites =
-favorites.filter(
-name => name !== cardName
-);
-
-button.textContent = "☆";
-
-button.classList.remove("active");
-
-} else {
-
-favorites.push(cardName);
-
-button.textContent = "★";
-
-button.classList.add("active");
-
-}
-
-
-localStorage.setItem(
-"favorites",
-JSON.stringify(favorites)
-);
-
-
-if (currentFilter === "favorite") {
-
-applyFilters();
-
-}
-
-}
-
-
-/* =========================
-   즐겨찾기 불러오기
-========================= */
-
-function loadFavorites() {
-
-const favorites =
-JSON.parse(
-localStorage.getItem("favorites") || "[]"
-);
-
-cards.forEach(card => {
-
-const name =
-card.querySelector("h2").textContent;
-
-const button =
-card.querySelector(".favorite");
-
-
-if (favorites.includes(name)) {
-
-button.textContent = "★";
-
-button.classList.add("active");
-
-}
-
-});
+  event.target
+    .parentElement
+    .classList
+    .remove("show");
 
 }
 
@@ -1900,22 +2032,26 @@ button.classList.add("active");
    하이라이트 제거
 ========================= */
 
-function removeHighlights(element) {
+function removeHighlights(
+  element
+) {
 
-const highlights =
-element.querySelectorAll(
-".search-highlight"
-);
+  const highlights =
+    element.querySelectorAll(
+      ".search-highlight"
+    );
 
-highlights.forEach(highlight => {
+  highlights.forEach(
+    highlight => {
 
-highlight.replaceWith(
-document.createTextNode(
-highlight.textContent
-)
-);
+      highlight.replaceWith(
+        document.createTextNode(
+          highlight.textContent
+        )
+      );
 
-});
+    }
+  );
 
 }
 
@@ -1924,143 +2060,166 @@ highlight.textContent
    하이라이트
 ========================= */
 
-function highlightText(element, keyword) {
-
-if (!keyword) return;
-
-const walker =
-document.createTreeWalker(
-element,
-NodeFilter.SHOW_TEXT,
-{
-
-acceptNode: function(node) {
-
-if (
-node.parentElement &&
-(
-node.parentElement.closest(".close") ||
-node.parentElement.closest(".favorite") ||
-node.parentElement.closest(".point-plus") ||
-node.parentElement.closest(".point-minus") ||
-node.parentElement.classList.contains("search-highlight")
-)
+function highlightText(
+  element,
+  keyword
 ) {
 
-return NodeFilter.FILTER_REJECT;
+  if (!keyword) return;
 
-}
+  const walker =
+    document.createTreeWalker(
+      element,
+      NodeFilter.SHOW_TEXT,
+      {
 
+        acceptNode:
+          function(node) {
 
-if (
-node.textContent
-.toLowerCase()
-.includes(keyword.toLowerCase())
-) {
+            if (
+              node.parentElement &&
+              (
+                node.parentElement.closest(
+                  ".close"
+                ) ||
+                node.parentElement.closest(
+                  ".item-favorite"
+                ) ||
+                node.parentElement.closest(
+                  ".point-plus"
+                ) ||
+                node.parentElement.closest(
+                  ".point-minus"
+                ) ||
+                node.parentElement.classList.contains(
+                  "search-highlight"
+                )
+              )
+            ) {
 
-return NodeFilter.FILTER_ACCEPT;
+              return NodeFilter.FILTER_REJECT;
 
-}
+            }
 
-return NodeFilter.FILTER_REJECT;
+            if (
+              node.textContent
+                .toLowerCase()
+                .includes(
+                  keyword.toLowerCase()
+                )
+            ) {
 
-}
+              return NodeFilter.FILTER_ACCEPT;
 
-}
-);
+            }
 
+            return NodeFilter.FILTER_REJECT;
 
-const nodes = [];
+          }
 
-while (walker.nextNode()) {
-
-nodes.push(
-walker.currentNode
-);
-
-}
-
-
-nodes.forEach(node => {
-
-const text =
-node.textContent;
-
-const lowerText =
-text.toLowerCase();
-
-const lowerKeyword =
-keyword.toLowerCase();
-
-const fragment =
-document.createDocumentFragment();
-
-let start = 0;
-
-
-while (true) {
-
-const index =
-lowerText.indexOf(
-lowerKeyword,
-start
-);
+      }
+    );
 
 
-if (index === -1) {
+  const nodes = [];
 
-if (start < text.length) {
+  while (
+    walker.nextNode()
+  ) {
 
-fragment.appendChild(
-document.createTextNode(
-text.substring(start)
-)
-);
+    nodes.push(
+      walker.currentNode
+    );
 
-}
-
-break;
-
-}
+  }
 
 
-if (index > start) {
+  nodes.forEach(node => {
 
-fragment.appendChild(
-document.createTextNode(
-text.substring(start, index)
-)
-);
+    const text =
+      node.textContent;
 
-}
+    const lowerText =
+      text.toLowerCase();
 
+    const lowerKeyword =
+      keyword.toLowerCase();
 
-const mark =
-document.createElement("mark");
+    const fragment =
+      document.createDocumentFragment();
 
-mark.className =
-"search-highlight";
-
-mark.textContent =
-text.substring(
-index,
-index + keyword.length
-);
-
-fragment.appendChild(mark);
-
-start =
-index + keyword.length;
-
-}
+    let start = 0;
 
 
-node.parentNode.replaceChild(
-fragment,
-node
-);
+    while (true) {
 
-});
+      const index =
+        lowerText.indexOf(
+          lowerKeyword,
+          start
+        );
+
+      if (index === -1) {
+
+        if (
+          start < text.length
+        ) {
+
+          fragment.appendChild(
+            document.createTextNode(
+              text.substring(start)
+            )
+          );
+
+        }
+
+        break;
+
+      }
+
+
+      if (index > start) {
+
+        fragment.appendChild(
+          document.createTextNode(
+            text.substring(
+              start,
+              index
+            )
+          )
+        );
+
+      }
+
+
+      const mark =
+        document.createElement(
+          "mark"
+        );
+
+      mark.className =
+        "search-highlight";
+
+      mark.textContent =
+        text.substring(
+          index,
+          index + keyword.length
+        );
+
+      fragment.appendChild(mark);
+
+      start =
+        index + keyword.length;
+
+    }
+
+
+    node.parentNode.replaceChild(
+      fragment,
+      node
+    );
+
+  });
 
 }
 
@@ -2069,22 +2228,31 @@ node
    필터
 ========================= */
 
-function setFilter(filter, button) {
+function setFilter(
+  filter,
+  button
+) {
 
-currentFilter =
-filter;
+  currentFilter =
+    filter;
 
-document
-.querySelectorAll(".filter-btn")
-.forEach(btn => {
+  document
+    .querySelectorAll(
+      ".filter-btn"
+    )
+    .forEach(btn => {
 
-btn.classList.remove("active");
+      btn.classList.remove(
+        "active"
+      );
 
-});
+    });
 
-button.classList.add("active");
+  button.classList.add(
+    "active"
+  );
 
-applyFilters();
+  applyFilters();
 
 }
 
@@ -2095,114 +2263,182 @@ applyFilters();
 
 function applyFilters() {
 
-const input =
-document.getElementById("search")
-.value
-.trim();
+  const input =
+    document.getElementById(
+      "search"
+    )
+    .value
+    .trim();
 
-const keyword =
-input.toLowerCase();
+  const keyword =
+    input.toLowerCase();
 
-let visibleCount = 0;
+  let visibleCount = 0;
 
-
-let favorites =
-JSON.parse(
-localStorage.getItem("favorites") || "[]"
-);
-
-
-cards.forEach(card => {
-
-removeHighlights(card);
+  const favorites =
+    JSON.parse(
+      localStorage.getItem(
+        "ruleFavorites"
+      ) || "[]"
+    );
 
 
-const text =
-card.innerText.toLowerCase();
+  cards.forEach(card => {
 
-const keywords =
-card.dataset.search.toLowerCase();
+    removeHighlights(card);
 
+    const text =
+      card.innerText.toLowerCase();
 
-const matchesSearch =
-keyword === "" ||
-text.includes(keyword) ||
-keywords.includes(keyword);
+    const keywords =
+      card.dataset.search.toLowerCase();
 
-
-let matchesFilter = true;
-
-
-if (currentFilter === "plus") {
-
-matchesFilter =
-card.dataset.type === "plus" ||
-card.dataset.type === "both";
-
-}
+    const matchesSearch =
+      keyword === "" ||
+      text.includes(keyword) ||
+      keywords.includes(keyword);
 
 
-if (currentFilter === "minus") {
-
-matchesFilter =
-card.dataset.type === "minus" ||
-card.dataset.type === "both";
-
-}
+    let matchesFilter = true;
 
 
-if (currentFilter === "favorite") {
+    if (
+      currentFilter === "plus"
+    ) {
 
-const name =
-card.querySelector("h2").textContent;
+      matchesFilter =
+        card.dataset.type === "plus" ||
+        card.dataset.type === "both";
 
-matchesFilter =
-favorites.includes(name);
-
-}
-
-
-if (
-matchesSearch &&
-matchesFilter
-) {
-
-card.style.display = "";
-
-visibleCount++;
+    }
 
 
-if (keyword !== "") {
+    if (
+      currentFilter === "minus"
+    ) {
 
-const detail =
-card.querySelector(".detail");
+      matchesFilter =
+        card.dataset.type === "minus" ||
+        card.dataset.type === "both";
 
-detail.classList.add("show");
-
-highlightText(
-card,
-input
-);
-
-}
-
-} else {
-
-card.style.display = "none";
-
-card.querySelector(".detail")
-.classList.remove("show");
-
-}
-
-});
+    }
 
 
-document.getElementById("resultCount")
-.textContent =
-"검색 결과 " +
-visibleCount +
-"개";
+    if (
+      currentFilter === "favorite"
+    ) {
+
+      const favoriteItems =
+        card.querySelectorAll(
+          ".rule-item"
+        );
+
+      let hasFavorite = false;
+
+
+      favoriteItems.forEach(item => {
+
+        const button =
+          item.querySelector(
+            ".item-favorite"
+          );
+
+        if (
+          button &&
+          favorites.includes(
+            button.dataset.rule
+          )
+        ) {
+
+          hasFavorite = true;
+
+          item.style.display = "";
+
+        } else {
+
+          item.style.display = "none";
+
+        }
+
+      });
+
+
+      matchesFilter =
+        hasFavorite;
+
+    } else {
+
+      card
+        .querySelectorAll(
+          ".rule-item"
+        )
+        .forEach(item => {
+
+          item.style.display = "";
+
+        });
+
+    }
+
+
+    if (
+      matchesSearch &&
+      matchesFilter
+    ) {
+
+      card.style.display = "";
+
+      visibleCount++;
+
+
+      if (
+        keyword !== ""
+      ) {
+
+        const detail =
+          card.querySelector(
+            ".detail"
+          );
+
+        detail.classList.add(
+          "show"
+        );
+
+        highlightText(
+          card,
+          input
+        );
+
+      }
+
+    } else {
+
+      card.style.display = "none";
+
+      card
+        .querySelector(
+          ".detail"
+        )
+        .classList.remove(
+          "show"
+        );
+
+    }
+
+  });
+
+
+  document.getElementById(
+    "resultCount"
+  )
+  .textContent =
+    currentFilter === "favorite"
+      ? "즐겨찾기 " +
+        visibleCount +
+        "개"
+      : "검색 결과 " +
+        visibleCount +
+        "개";
 
 }
 
@@ -2213,7 +2449,7 @@ visibleCount +
 
 function searchRules() {
 
-applyFilters();
+  applyFilters();
 
 }
 
@@ -2224,52 +2460,56 @@ applyFilters();
 
 function calculatePoints() {
 
-const plus =
-Number(
-document.getElementById("plusPoint").value
-) || 0;
+  const plus =
+    Number(
+      document.getElementById(
+        "plusPoint"
+      ).value
+    ) || 0;
 
-const minus =
-Number(
-document.getElementById("minusPoint").value
-) || 0;
+  const minus =
+    Number(
+      document.getElementById(
+        "minusPoint"
+      ).value
+    ) || 0;
 
-const result =
-plus - minus;
+  const result =
+    plus - minus;
 
-const resultBox =
-document.getElementById(
-"calculatorResult"
-);
+  const resultBox =
+    document.getElementById(
+      "calculatorResult"
+    );
 
 
-if (result > 0) {
+  if (result > 0) {
 
-resultBox.innerHTML =
-"최종 생활평점<br>" +
-'<span class="result-number">+' +
-result +
-"점</span>";
+    resultBox.innerHTML =
+      "최종 생활평점<br>" +
+      '<span class="result-number">+' +
+      result +
+      "점</span>";
 
-}
+  }
 
-else if (result < 0) {
+  else if (result < 0) {
 
-resultBox.innerHTML =
-"최종 생활평점<br>" +
-'<span class="result-number">' +
-result +
-"점</span>";
+    resultBox.innerHTML =
+      "최종 생활평점<br>" +
+      '<span class="result-number">' +
+      result +
+      "점</span>";
 
-}
+  }
 
-else {
+  else {
 
-resultBox.innerHTML =
-"최종 생활평점<br>" +
-'<span class="result-number">0점</span>';
+    resultBox.innerHTML =
+      "최종 생활평점<br>" +
+      '<span class="result-number">0점</span>';
 
-}
+  }
 
 }
 
@@ -2280,64 +2520,90 @@ resultBox.innerHTML =
 
 function resetCalculator() {
 
-document.getElementById(
-"plusPoint"
-).value = 0;
+  document.getElementById(
+    "plusPoint"
+  ).value = 0;
 
-document.getElementById(
-"minusPoint"
-).value = 0;
+  document.getElementById(
+    "minusPoint"
+  ).value = 0;
 
-document.getElementById(
-"calculatorResult"
-).innerHTML =
-"상점에서 벌점을 뺀 최종 점수가 표시됩니다.";
+  document.getElementById(
+    "calculatorResult"
+  ).innerHTML =
+    "상점에서 벌점을 뺀 최종 점수가 표시됩니다.";
 
 }
 
 
 /* =========================
-   HOME 버튼
+   HOME
 ========================= */
 
 function goHome() {
 
-document.getElementById("search").value = "";
+  document.getElementById(
+    "search"
+  ).value = "";
 
-currentFilter = "all";
-
-
-document
-.querySelectorAll(".filter-btn")
-.forEach(btn => {
-
-btn.classList.remove("active");
-
-});
+  currentFilter =
+    "all";
 
 
-document
-.querySelector(".filter-btn")
-.classList.add("active");
+  document
+    .querySelectorAll(
+      ".filter-btn"
+    )
+    .forEach(btn => {
+
+      btn.classList.remove(
+        "active"
+      );
+
+    });
 
 
-cards.forEach(card => {
-
-card.style.display = "";
-
-card.querySelector(".detail")
-.classList.remove("show");
-
-});
-
-
-applyFilters();
+  document
+    .querySelector(
+      ".filter-btn"
+    )
+    .classList.add(
+      "active"
+    );
 
 
-window.scrollTo({
-top: 0,
-behavior: "smooth"
-});
+  cards.forEach(card => {
+
+    card.style.display = "";
+
+    card
+      .querySelector(
+        ".detail"
+      )
+      .classList.remove(
+        "show"
+      );
+
+    card
+      .querySelectorAll(
+        ".rule-item"
+      )
+      .forEach(item => {
+
+        item.style.display = "";
+
+      });
+
+  });
+
+
+  applyFilters();
+
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
 
 }
 
@@ -2347,32 +2613,39 @@ behavior: "smooth"
 ========================= */
 
 window.addEventListener(
-"scroll",
-function() {
+  "scroll",
+  function() {
 
-const button =
-document.getElementById("topButton");
+    const button =
+      document.getElementById(
+        "topButton"
+      );
 
 
-if (window.scrollY > 300) {
+    if (
+      window.scrollY > 300
+    ) {
 
-button.style.display = "block";
+      button.style.display =
+        "block";
 
-} else {
+    } else {
 
-button.style.display = "none";
+      button.style.display =
+        "none";
 
-}
+    }
 
-});
+  }
+);
 
 
 function goTop() {
 
-window.scrollTo({
-top: 0,
-behavior: "smooth"
-});
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
 
 }
 
@@ -2381,7 +2654,9 @@ behavior: "smooth"
    처음 실행
 ========================= */
 
-loadFavorites();
+setupRuleFavorites();
+
+loadItemFavorites();
 
 applyFilters();
 
