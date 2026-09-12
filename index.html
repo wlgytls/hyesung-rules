@@ -17,16 +17,21 @@ html {
 body {
   margin: 0;
   font-family: Arial, "Noto Sans KR", sans-serif;
-  background: #f7f8fc;
-  color: #222;
+  background: #faf7f8;
+  color: #292629;
 }
 
+/* =========================
+   헤더
+========================= */
+
 header {
-  background: #fff;
-  border-bottom: 1px solid #e8e8ee;
+  background: rgba(255,255,255,0.95);
+  border-bottom: 1px solid #eee2e5;
   position: sticky;
   top: 0;
   z-index: 100;
+  backdrop-filter: blur(10px);
 }
 
 .header-inner {
@@ -40,46 +45,78 @@ header {
 }
 
 .logo {
-  font-size: 22px;
+  font-size: 21px;
   font-weight: 900;
   cursor: pointer;
+  letter-spacing: -0.5px;
+  transition: color 0.2s ease;
+}
+
+.logo:hover {
+  color: #c97889;
 }
 
 .header-buttons {
   display: flex;
-  gap: 10px;
+  gap: 9px;
 }
 
 .header-btn {
-  border: none;
-  background: #f1f2f7;
+  border: 1px solid #eadde1;
+  background: #fffafb;
+  color: #555054;
   padding: 10px 15px;
-  border-radius: 10px;
+  border-radius: 11px;
   font-weight: 700;
   cursor: pointer;
+  transition: 0.2s ease;
 }
 
 .header-btn:hover {
-  background: #e5e7ef;
+  background: #f8e9ed;
+  border-color: #e4c5cd;
+  transform: translateY(-1px);
 }
+
+/* =========================
+   메인
+========================= */
 
 .hero {
   max-width: 1100px;
   margin: auto;
-  padding: 65px 20px 35px;
+  padding: 68px 20px 38px;
+  animation: heroAppear 0.7s ease both;
 }
 
 .hero h1 {
   font-size: 40px;
   margin: 0 0 12px;
   font-weight: 900;
+  letter-spacing: -1.5px;
 }
 
 .hero p {
   margin: 0;
-  color: #666;
+  color: #777075;
   font-size: 16px;
 }
+
+@keyframes heroAppear {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   검색
+========================= */
 
 .search-area {
   max-width: 1100px;
@@ -90,16 +127,22 @@ header {
 .search-box {
   width: 100%;
   padding: 17px 20px;
-  border: 1px solid #ddd;
+  border: 1px solid #e8dfe2;
   border-radius: 14px;
   font-size: 16px;
   outline: none;
   background: white;
+  transition: 0.2s ease;
 }
 
 .search-box:focus {
-  border-color: #999;
+  border-color: #d99aa8;
+  box-shadow: 0 0 0 3px rgba(217,139,155,0.10);
 }
+
+/* =========================
+   필터
+========================= */
 
 .filter-area {
   max-width: 1100px;
@@ -111,27 +154,42 @@ header {
 }
 
 .filter-btn {
-  border: none;
-  background: #e9eaf0;
+  border: 1px solid #e9dfe2;
+  background: #f4eef0;
+  color: #655e62;
   padding: 10px 16px;
   border-radius: 10px;
   cursor: pointer;
   font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.filter-btn:hover {
+  background: #f1e3e7;
 }
 
 .filter-btn.active {
-  background: #222;
+  background: #d58b9b;
   color: white;
+  border-color: #d58b9b;
 }
+
+/* =========================
+   검색 결과
+========================= */
 
 .result-count {
   max-width: 1100px;
   margin: auto;
   padding: 0 20px 20px;
-  color: #777;
+  color: #8b8185;
   font-size: 14px;
   font-weight: 700;
 }
+
+/* =========================
+   카드
+========================= */
 
 .cards {
   max-width: 1100px;
@@ -144,13 +202,66 @@ header {
   border-radius: 18px;
   margin-bottom: 18px;
   padding: 24px;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.04);
+  box-shadow: 0 4px 18px rgba(105,67,77,0.045);
   cursor: pointer;
-  border: 1px solid #eeeeF2;
+  border: 1px solid #eee3e6;
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease;
+  animation: cardAppear 0.55s ease both;
+}
+
+.card:nth-child(1) {
+  animation-delay: 0.04s;
+}
+
+.card:nth-child(2) {
+  animation-delay: 0.08s;
+}
+
+.card:nth-child(3) {
+  animation-delay: 0.12s;
+}
+
+.card:nth-child(4) {
+  animation-delay: 0.16s;
+}
+
+.card:nth-child(5) {
+  animation-delay: 0.20s;
+}
+
+.card:nth-child(6) {
+  animation-delay: 0.24s;
+}
+
+.card:nth-child(7) {
+  animation-delay: 0.28s;
+}
+
+.card:nth-child(8) {
+  animation-delay: 0.32s;
+}
+
+.card:nth-child(9) {
+  animation-delay: 0.36s;
+}
+
+@keyframes cardAppear {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .card:hover {
-  box-shadow: 0 7px 25px rgba(0,0,0,0.07);
+  transform: translateY(-2px);
+  box-shadow: 0 9px 26px rgba(105,67,77,0.08);
 }
 
 .card-head {
@@ -163,7 +274,8 @@ header {
   width: 48px;
   height: 48px;
   border-radius: 13px;
-  background: #f0f1f5;
+  background: #f8e9ed;
+  color: #bd6f80;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -175,19 +287,24 @@ header {
 .card h2 {
   margin: 0 0 5px;
   font-size: 21px;
+  letter-spacing: -0.4px;
 }
 
 .card-summary {
   margin: 0;
-  color: #777;
+  color: #80787c;
   font-size: 14px;
 }
+
+/* =========================
+   상세 내용
+========================= */
 
 .detail {
   display: none;
   margin-top: 22px;
   padding-top: 20px;
-  border-top: 1px solid #eee;
+  border-top: 1px solid #eee4e6;
   cursor: default;
 }
 
@@ -206,6 +323,7 @@ header {
 .detail-section h3 {
   font-size: 16px;
   margin: 0 0 10px;
+  color: #5f555a;
 }
 
 .detail ul {
@@ -229,11 +347,11 @@ header {
 }
 
 .point-plus {
-  color: #16834a;
+  color: #478d69;
 }
 
 .point-minus {
-  color: #d33c3c;
+  color: #c85f68;
 }
 
 .point-plus:hover,
@@ -247,30 +365,48 @@ header {
   top: 0;
   border: none;
   background: transparent;
+  color: #d48a99;
   font-size: 18px;
   cursor: pointer;
   padding: 2px 5px;
+  transition: transform 0.15s ease;
+}
+
+.item-favorite:hover {
+  transform: scale(1.15);
 }
 
 .close-detail {
   margin-top: 20px;
   border: none;
-  background: #f0f1f5;
+  background: #f5edef;
+  color: #655c60;
   padding: 9px 14px;
   border-radius: 9px;
   cursor: pointer;
   font-weight: 700;
 }
 
+.close-detail:hover {
+  background: #f0e1e5;
+}
+
+/* =========================
+   검색 강조
+========================= */
+
 .search-highlight {
-  background: #fff19a;
+  background: #ffe8a8;
   color: inherit;
   padding: 2px 3px;
   border-radius: 4px;
   font-weight: 800;
 }
 
-/* 질문 */
+/* =========================
+   질문
+========================= */
+
 .question-box {
   max-width: 1100px;
   margin: 0 auto 30px;
@@ -278,7 +414,7 @@ header {
 }
 
 .question-inner {
-  background: #222;
+  background: #c98292;
   color: white;
   border-radius: 18px;
   padding: 25px;
@@ -286,6 +422,7 @@ header {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+  box-shadow: 0 7px 22px rgba(167,91,108,0.13);
 }
 
 .question-inner h2 {
@@ -295,22 +432,30 @@ header {
 
 .question-inner p {
   margin: 0;
-  color: #ccc;
+  color: #f9e9ed;
   font-size: 14px;
 }
 
 .question-btn {
   border: none;
   background: white;
-  color: #222;
+  color: #9d596a;
   padding: 12px 18px;
   border-radius: 10px;
   font-weight: 800;
   cursor: pointer;
   white-space: nowrap;
+  transition: 0.2s ease;
 }
 
-/* 내 상점·벌점 */
+.question-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* =========================
+   내 상점·벌점
+========================= */
+
 .my-points {
   max-width: 1100px;
   margin: 0 auto 35px;
@@ -321,8 +466,8 @@ header {
   background: white;
   border-radius: 18px;
   padding: 28px;
-  border: 1px solid #eeeeF2;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.04);
+  border: 1px solid #eee3e6;
+  box-shadow: 0 4px 18px rgba(105,67,77,0.045);
 }
 
 .my-points-header {
@@ -334,7 +479,7 @@ header {
 .my-points-icon {
   width: 45px;
   height: 45px;
-  background: #222;
+  background: #d58b9b;
   color: white;
   border-radius: 12px;
   display: flex;
@@ -350,7 +495,7 @@ header {
 }
 
 .my-points-description {
-  color: #777;
+  color: #7d7478;
   font-size: 14px;
   margin: 14px 0 20px;
   line-height: 1.6;
@@ -359,17 +504,19 @@ header {
 .direct-add-btn {
   width: 100%;
   border: none;
-  background: #222;
+  background: #d58b9b;
   color: white;
   padding: 14px;
   border-radius: 11px;
   font-weight: 800;
   cursor: pointer;
   margin-bottom: 18px;
+  transition: 0.2s ease;
 }
 
 .direct-add-btn:hover {
-  background: #333;
+  background: #c97d8e;
+  transform: translateY(-1px);
 }
 
 .point-summary {
@@ -380,14 +527,15 @@ header {
 }
 
 .summary-item {
-  background: #f7f8fa;
+  background: #fbf7f8;
   border-radius: 13px;
   padding: 17px;
   text-align: center;
+  border: 1px solid #f0e6e9;
 }
 
 .summary-label {
-  color: #777;
+  color: #80777b;
   font-size: 13px;
   margin-bottom: 7px;
 }
@@ -407,7 +555,7 @@ header {
   text-align: center;
   padding: 25px;
   color: #999;
-  background: #f7f8fa;
+  background: #fbf7f8;
   border-radius: 12px;
 }
 
@@ -417,7 +565,7 @@ header {
   align-items: center;
   gap: 12px;
   padding: 14px;
-  background: #f7f8fa;
+  background: #fbf7f8;
   border-radius: 12px;
 }
 
@@ -435,11 +583,11 @@ header {
 }
 
 .history-score.plus {
-  color: #16834a;
+  color: #478d69;
 }
 
 .history-score.minus {
-  color: #d33c3c;
+  color: #c85f68;
 }
 
 .delete-history {
@@ -460,12 +608,15 @@ header {
   font-size: 13px;
 }
 
-/* 점수 기록 팝업 */
+/* =========================
+   팝업
+========================= */
+
 .point-modal {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.45);
+  background: rgba(58,38,43,0.38);
   z-index: 300;
   align-items: center;
   justify-content: center;
@@ -482,7 +633,20 @@ header {
   background: white;
   border-radius: 20px;
   padding: 25px;
-  box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+  box-shadow: 0 15px 50px rgba(70,40,48,0.18);
+  animation: modalAppear 0.2s ease both;
+}
+
+@keyframes modalAppear {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 .point-modal-box h2 {
@@ -508,10 +672,16 @@ header {
 .point-modal select {
   width: 100%;
   padding: 12px;
-  border: 1px solid #ddd;
+  border: 1px solid #e1d9dc;
   border-radius: 10px;
   font-size: 15px;
   background: white;
+  outline: none;
+}
+
+.point-modal input:focus,
+.point-modal select:focus {
+  border-color: #d99aa8;
 }
 
 .score-choice {
@@ -523,7 +693,7 @@ header {
   flex: 1;
   padding: 12px;
   border-radius: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid #e0d8db;
   background: white;
   cursor: pointer;
   font-size: 15px;
@@ -531,9 +701,9 @@ header {
 }
 
 .score-choice button.selected {
-  background: #222;
+  background: #d58b9b;
   color: white;
-  border-color: #222;
+  border-color: #d58b9b;
 }
 
 .modal-buttons {
@@ -552,13 +722,18 @@ header {
 }
 
 .modal-cancel {
-  background: #f0f1f5;
+  background: #f3edef;
+  color: #625b5e;
 }
 
 .modal-save {
-  background: #222;
+  background: #d58b9b;
   color: white;
 }
+
+/* =========================
+   안내 / 푸터
+========================= */
 
 .notice {
   max-width: 1100px;
@@ -567,28 +742,32 @@ header {
 }
 
 .notice-inner {
-  background: #fff;
-  border: 1px solid #eeeeF2;
+  background: #fffafb;
+  border: 1px solid #eee3e6;
   border-radius: 15px;
   padding: 20px;
-  color: #777;
+  color: #81787c;
   font-size: 13px;
   line-height: 1.6;
 }
 
 footer {
-  background: #222;
-  color: #aaa;
+  background: #3b3437;
+  color: #eee4e7;
   text-align: center;
   padding: 35px 20px;
   font-size: 13px;
 }
 
-  .creator {
-    margin-top: 8px;
-    font-size: 11px;
-    color: #777;
-  }
+.creator {
+  margin-top: 8px;
+  font-size: 11px;
+  color: #bcaeb2;
+}
+
+/* =========================
+   위로가기
+========================= */
 
 #topButton {
   position: fixed;
@@ -598,15 +777,25 @@ footer {
   height: 45px;
   border: none;
   border-radius: 50%;
-  background: #222;
+  background: #d58b9b;
   color: white;
   font-weight: 900;
   cursor: pointer;
   display: none;
   z-index: 150;
+  box-shadow: 0 5px 15px rgba(120,70,82,0.18);
+  transition: 0.2s ease;
 }
 
-/* 모바일 */
+#topButton:hover {
+  transform: translateY(-2px);
+  background: #c97d8e;
+}
+
+/* =========================
+   모바일
+========================= */
+
 @media (max-width: 700px) {
 
   .header-inner {
@@ -689,13 +878,21 @@ footer {
     </div>
 
     <div class="header-buttons">
-      <button class="header-btn" onclick="goHome()">
+
+      <button
+        class="header-btn"
+        onclick="goHome()"
+      >
         HOME
       </button>
 
-      <button class="header-btn" onclick="openQuestionForm()">
+      <button
+        class="header-btn"
+        onclick="openQuestionForm()"
+      >
         질문하기
       </button>
+
     </div>
 
   </div>
@@ -759,7 +956,10 @@ footer {
 </div>
 
 
-<div class="result-count" id="resultCount">
+<div
+  class="result-count"
+  id="resultCount"
+>
   검색 결과 9개
 </div>
 
@@ -777,10 +977,13 @@ footer {
     <div class="card-icon">01</div>
 
     <div>
+
       <h2>출결</h2>
+
       <p class="card-summary">
         지각·결석·조퇴 등 출결 관련 교칙
       </p>
+
     </div>
 
   </div>
@@ -793,6 +996,7 @@ footer {
       <h3>벌점</h3>
 
       <ul>
+
         <li>
           무단 지각·무단 결과·무단 조퇴·무단 외출
           <span class="point-minus">-1~2</span>
@@ -807,6 +1011,7 @@ footer {
           교내·외 단체 활동 또는 행사 무단 불참
           <span class="point-minus">-2</span>
         </li>
+
       </ul>
 
     </div>
@@ -817,13 +1022,16 @@ footer {
       <h3>상점</h3>
 
       <ul>
+
         <li>
           무결석 학급 1학기(학급 전체학생에게 부여)
           <span class="point-plus">+3</span>
         </li>
+
       </ul>
 
     </div>
+
 
     <button
       class="close-detail"
@@ -848,10 +1056,13 @@ footer {
     <div class="card-icon">02</div>
 
     <div>
+
       <h2>복장·용의</h2>
+
       <p class="card-summary">
         두발·복장·용의 규정
       </p>
+
     </div>
 
   </div>
@@ -924,10 +1135,13 @@ footer {
     <div class="card-icon">03</div>
 
     <div>
+
       <h2>스마트기기</h2>
+
       <p class="card-summary">
         전자기기·무선 이어폰 관련 규정
       </p>
+
     </div>
 
   </div>
@@ -979,10 +1193,13 @@ footer {
     <div class="card-icon">04</div>
 
     <div>
+
       <h2>교내생활</h2>
+
       <p class="card-summary">
         청소·시설·생활질서 관련 규정
       </p>
+
     </div>
 
   </div>
@@ -1090,10 +1307,13 @@ footer {
     <div class="card-icon">05</div>
 
     <div>
+
       <h2>안전·학교폭력</h2>
+
       <p class="card-summary">
         안전사고 및 학교폭력 관련 규정
       </p>
+
     </div>
 
   </div>
@@ -1181,10 +1401,13 @@ footer {
     <div class="card-icon">06</div>
 
     <div>
+
       <h2>예절·생활</h2>
+
       <p class="card-summary">
         예절·수업태도·학교생활 관련 규정
       </p>
+
     </div>
 
   </div>
@@ -1297,10 +1520,13 @@ footer {
     <div class="card-icon">07</div>
 
     <div>
+
       <h2>전체 상점</h2>
+
       <p class="card-summary">
         상점 항목을 한눈에 확인
       </p>
+
     </div>
 
   </div>
@@ -1364,10 +1590,13 @@ footer {
     <div class="card-icon">08</div>
 
     <div>
+
       <h2>전체 벌점</h2>
+
       <p class="card-summary">
         벌점 항목을 한눈에 확인
       </p>
+
     </div>
 
   </div>
@@ -1437,10 +1666,13 @@ footer {
     <div class="card-icon">09</div>
 
     <div>
+
       <h2>기타</h2>
+
       <p class="card-summary">
         기타 상점·벌점 항목
       </p>
+
     </div>
 
   </div>
@@ -1554,7 +1786,10 @@ footer {
 
 
 <!-- 내 기록 -->
-<section class="my-points" id="myPoints">
+<section
+  class="my-points"
+  id="myPoints"
+>
 
   <div class="my-points-box">
 
@@ -1580,7 +1815,6 @@ footer {
     </div>
 
 
-    <!-- 직접 추가 버튼 -->
     <button
       class="direct-add-btn"
       onclick="openDirectAddModal()"
@@ -1678,8 +1912,15 @@ footer {
 
 
 <footer>
-  <div>혜성여자고등학교 교칙 안내</div>
-  <div class="creator">기획·제작 | PROMO 신지효</div>
+
+  <div>
+    혜성여자고등학교 교칙 안내
+  </div>
+
+  <div class="creator">
+    기획·제작 | PROMO 신지효
+  </div>
+
 </footer>
 
 
