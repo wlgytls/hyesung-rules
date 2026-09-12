@@ -49,21 +49,36 @@ header {
   color: #183b63;
 }
 
-.home-button {
-  border: none;
+.header-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.header-button {
+  border: 1px solid #dce3ec;
   background: #edf4fc;
   color: #244b75;
-  padding: 9px 15px;
-  border-radius: 12px;
+  padding: 9px 14px;
+  border-radius: 11px;
   cursor: pointer;
   font-size: 13px;
   font-weight: 800;
   transition: 0.2s;
 }
 
-.home-button:hover {
+.header-button:hover {
   background: #dfeaf8;
   transform: translateY(-1px);
+}
+
+.question-button {
+  background: #244c75;
+  color: white;
+  border-color: #244c75;
+}
+
+.question-button:hover {
+  background: #193b5d;
 }
 
 
@@ -121,17 +136,9 @@ header {
   position: relative;
 }
 
-.search-icon {
-  position: absolute;
-  left: 18px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 18px;
-}
-
 .search-box input {
   width: 100%;
-  padding: 17px 20px 17px 50px;
+  padding: 17px 20px;
   border: 1px solid #dce3ec;
   border-radius: 15px;
   font-size: 15px;
@@ -231,7 +238,9 @@ header {
   justify-content: center;
   background: #f0f5fb;
   border-radius: 14px;
-  font-size: 24px;
+  font-size: 14px;
+  font-weight: 900;
+  color: #35638e;
   margin-bottom: 16px;
 }
 
@@ -271,12 +280,13 @@ header {
 
 .favorite:hover {
   transform: scale(1.08);
-  background: #fff8db;
+  background: #f2f6fb;
 }
 
 .favorite.active {
-  background: #fff3c4;
-  border-color: #f1df91;
+  background: #e5eef8;
+  border-color: #c8d9ea;
+  color: #244c75;
 }
 
 
@@ -384,6 +394,59 @@ header {
 
 
 /* =========================
+   QUESTION
+========================= */
+
+.question-box {
+  margin-top: 25px;
+  background: white;
+  border: 1px solid #e4e9f1;
+  border-radius: 20px;
+  padding: 23px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 4px 15px rgba(30,50,80,0.035);
+}
+
+.question-label {
+  font-size: 11px;
+  font-weight: 900;
+  color: #35638e;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.question-box h2 {
+  margin: 0 0 7px;
+  font-size: 18px;
+}
+
+.question-box p {
+  margin: 0;
+  color: #7a8596;
+  font-size: 13px;
+}
+
+.question-box button {
+  flex-shrink: 0;
+  border: none;
+  background: #244c75;
+  color: white;
+  padding: 12px 17px;
+  border-radius: 11px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.question-box button:hover {
+  background: #193b5d;
+}
+
+
+/* =========================
    CALCULATOR
 ========================= */
 
@@ -412,7 +475,9 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 22px;
+  font-size: 13px;
+  font-weight: 900;
+  color: #35638e;
 }
 
 .calculator h2 {
@@ -580,8 +645,13 @@ footer {
     font-size: 16px;
   }
 
-  .home-button {
-    padding: 8px 12px;
+  .header-actions {
+    gap: 5px;
+  }
+
+  .header-button {
+    padding: 8px 10px;
+    font-size: 11px;
   }
 
   .hero {
@@ -612,6 +682,15 @@ footer {
   .card {
     padding: 22px;
   }
+
+  .question-box {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .question-box button {
+    width: 100%;
+  }
 }
 </style>
 </head>
@@ -631,9 +710,17 @@ footer {
 혜성여고 교칙 안내
 </div>
 
-<button class="home-button" onclick="goHome()">
-🏠 홈
+<div class="header-actions">
+
+<button class="header-button" onclick="goHome()">
+HOME
 </button>
+
+<button class="header-button question-button" onclick="openQuestionForm()">
+질문 남기기
+</button>
+
+</div>
 
 </div>
 
@@ -670,8 +757,6 @@ footer {
 
 <div class="search-wrapper">
 
-<span class="search-icon">🔍</span>
-
 <input
 type="text"
 id="search"
@@ -697,17 +782,17 @@ onclick="setFilter('all', this)">
 
 <button class="filter-btn"
 onclick="setFilter('plus', this)">
-⭐ 상점
+상점
 </button>
 
 <button class="filter-btn"
 onclick="setFilter('minus', this)">
-⚠️ 벌점
+벌점
 </button>
 
 <button class="filter-btn"
 onclick="setFilter('favorite', this)">
-☆ 즐겨찾기
+즐겨찾기
 </button>
 
 </div>
@@ -738,7 +823,7 @@ onclick="toggleFavorite(event, this)">
 ☆
 </button>
 
-<div class="icon">📚</div>
+<div class="icon">01</div>
 
 <h2>출결</h2>
 
@@ -750,7 +835,7 @@ onclick="toggleFavorite(event, this)">
 
 <strong>출결 관련 상점·벌점</strong>
 
-<div class="section-title">⚠️ 벌점</div>
+<div class="section-title">벌점</div>
 
 <ul>
 
@@ -771,7 +856,7 @@ onclick="toggleFavorite(event, this)">
 
 </ul>
 
-<div class="section-title">⭐ 상점</div>
+<div class="section-title">상점</div>
 
 <ul>
 
@@ -802,7 +887,7 @@ onclick="toggleFavorite(event, this)">
 ☆
 </button>
 
-<div class="icon">👔</div>
+<div class="icon">02</div>
 
 <h2>복장·용의</h2>
 
@@ -814,7 +899,7 @@ onclick="toggleFavorite(event, this)">
 
 <strong>복장·용의 관련 상점·벌점</strong>
 
-<div class="section-title">⚠️ 벌점</div>
+<div class="section-title">벌점</div>
 
 <ul>
 
@@ -835,7 +920,7 @@ onclick="toggleFavorite(event, this)">
 
 </ul>
 
-<div class="section-title">⭐ 상점</div>
+<div class="section-title">상점</div>
 
 <ul>
 
@@ -866,7 +951,7 @@ onclick="toggleFavorite(event, this)">
 ☆
 </button>
 
-<div class="icon">📱</div>
+<div class="icon">03</div>
 
 <h2>스마트기기</h2>
 
@@ -878,7 +963,7 @@ onclick="toggleFavorite(event, this)">
 
 <strong>스마트기기 관련 벌점</strong>
 
-<div class="section-title">⚠️ 벌점</div>
+<div class="section-title">벌점</div>
 
 <ul>
 
@@ -914,7 +999,7 @@ onclick="toggleFavorite(event, this)">
 ☆
 </button>
 
-<div class="icon">🏫</div>
+<div class="icon">04</div>
 
 <h2>교내생활</h2>
 
@@ -926,7 +1011,7 @@ onclick="toggleFavorite(event, this)">
 
 <strong>교내생활 관련 상점·벌점</strong>
 
-<div class="section-title">⭐ 상점</div>
+<div class="section-title">상점</div>
 
 <ul>
 
@@ -952,7 +1037,7 @@ onclick="toggleFavorite(event, this)">
 
 </ul>
 
-<div class="section-title">⚠️ 벌점</div>
+<div class="section-title">벌점</div>
 
 <ul>
 
@@ -1013,7 +1098,7 @@ onclick="toggleFavorite(event, this)">
 ☆
 </button>
 
-<div class="icon">🛡️</div>
+<div class="icon">05</div>
 
 <h2>안전·학교폭력</h2>
 
@@ -1025,7 +1110,7 @@ onclick="toggleFavorite(event, this)">
 
 <strong>안전·학교폭력 관련 상점</strong>
 
-<div class="section-title">⭐ 상점</div>
+<div class="section-title">상점</div>
 
 <ul>
 
@@ -1056,7 +1141,7 @@ onclick="toggleFavorite(event, this)">
 
 </ul>
 
-<div class="section-title">⚠️ 벌점</div>
+<div class="section-title">벌점</div>
 
 <ul>
 
@@ -1092,7 +1177,7 @@ onclick="toggleFavorite(event, this)">
 ☆
 </button>
 
-<div class="icon">🤝</div>
+<div class="icon">06</div>
 
 <h2>예절·생활</h2>
 
@@ -1104,7 +1189,7 @@ onclick="toggleFavorite(event, this)">
 
 <strong>예절·생활 관련 상점·벌점</strong>
 
-<div class="section-title">⭐ 상점</div>
+<div class="section-title">상점</div>
 
 <ul>
 
@@ -1150,7 +1235,7 @@ onclick="toggleFavorite(event, this)">
 
 </ul>
 
-<div class="section-title">⚠️ 벌점</div>
+<div class="section-title">벌점</div>
 
 <ul>
 
@@ -1196,7 +1281,7 @@ onclick="toggleFavorite(event, this)">
 ☆
 </button>
 
-<div class="icon">⭐</div>
+<div class="icon">07</div>
 
 <h2>전체 상점</h2>
 
@@ -1206,7 +1291,7 @@ onclick="toggleFavorite(event, this)">
 
 <div class="detail">
 
-<strong>⭐ 상점 항목 전체</strong>
+<strong>상점 항목 전체</strong>
 
 <ul>
 
@@ -1254,7 +1339,7 @@ onclick="toggleFavorite(event, this)">
 ☆
 </button>
 
-<div class="icon">⚠️</div>
+<div class="icon">08</div>
 
 <h2>전체 벌점</h2>
 
@@ -1264,7 +1349,7 @@ onclick="toggleFavorite(event, this)">
 
 <div class="detail">
 
-<strong>⚠️ 벌점 항목 전체</strong>
+<strong>벌점 항목 전체</strong>
 
 <ul>
 
@@ -1318,7 +1403,7 @@ onclick="toggleFavorite(event, this)">
 ☆
 </button>
 
-<div class="icon">📌</div>
+<div class="icon">09</div>
 
 <h2>기타</h2>
 
@@ -1330,7 +1415,7 @@ onclick="toggleFavorite(event, this)">
 
 <strong>기타 관련 상점·벌점</strong>
 
-<div class="section-title">⭐ 상점</div>
+<div class="section-title">상점</div>
 
 <ul>
 
@@ -1346,7 +1431,7 @@ onclick="toggleFavorite(event, this)">
 
 </ul>
 
-<div class="section-title">⚠️ 벌점</div>
+<div class="section-title">벌점</div>
 
 <ul>
 
@@ -1395,6 +1480,35 @@ onclick="closeDetail(event)">
 
 
 <!-- =========================
+     QUESTION BOX
+========================= -->
+
+<section class="question-box">
+
+<div>
+
+<div class="question-label">
+QUESTION
+</div>
+
+<h2>
+교칙에 대해 궁금한 점이 있나요?
+</h2>
+
+<p>
+궁금한 내용을 남겨주시면 확인할 수 있어요.
+</p>
+
+</div>
+
+<button onclick="openQuestionForm()">
+질문 남기기
+</button>
+
+</section>
+
+
+<!-- =========================
      CALCULATOR
 ========================= -->
 
@@ -1403,7 +1517,7 @@ onclick="closeDetail(event)">
 <div class="calculator-header">
 
 <div class="calculator-icon">
-🧮
+CALC
 </div>
 
 <h2>상점·벌점 계산기</h2>
@@ -1415,13 +1529,12 @@ onclick="closeDetail(event)">
 직접 숫자를 입력해서 계산할 수도 있어요.
 </div>
 
-
 <div class="calculator-inputs">
 
 <div class="calc-item">
 
 <label>
-⭐ 받은 상점
+받은 상점
 </label>
 
 <input
@@ -1437,7 +1550,7 @@ value="0"
 <div class="calc-item">
 
 <label>
-⚠️ 받은 벌점
+받은 벌점
 </label>
 
 <input
@@ -1483,12 +1596,12 @@ id="calculatorResult">
 
 <div class="notice">
 
-💡 이 페이지는 학생들이 교칙을 쉽게 확인할 수 있도록 주요 내용을 쉽게 정리한 안내 페이지입니다.
+이 페이지는 학생들이 교칙을 쉽게 확인할 수 있도록 주요 내용을 쉽게 정리한 안내 페이지입니다.
 정확한 내용은 학교의 공식 학생 생활규정을 확인해주세요.
 
 <br><br>
 
-📅 학생 생활규정 2026년 9월 4일 개정 시행
+학생 생활규정 2026년 9월 4일 개정 시행
 
 </div>
 
@@ -1508,9 +1621,24 @@ onclick="goTop()">
 ↑
 
 </button>
-
-
 <script>
+
+/* =========================
+   질문 남기기
+========================= */
+
+const QUESTION_FORM_URL =
+"https://forms.gle/p8YgbGx5cbzhr8YZ8";
+
+function openQuestionForm() {
+
+window.open(
+QUESTION_FORM_URL,
+"_blank"
+);
+
+}
+
 
 /* =========================
    기본 설정
@@ -2118,7 +2246,7 @@ document.getElementById(
 if (result > 0) {
 
 resultBox.innerHTML =
-"⭐ 최종 생활평점<br>" +
+"최종 생활평점<br>" +
 '<span class="result-number">+' +
 result +
 "점</span>";
@@ -2128,7 +2256,7 @@ result +
 else if (result < 0) {
 
 resultBox.innerHTML =
-"⚠️ 최종 생활평점<br>" +
+"최종 생활평점<br>" +
 '<span class="result-number">' +
 result +
 "점</span>";
@@ -2169,7 +2297,7 @@ document.getElementById(
 
 
 /* =========================
-   홈 버튼
+   HOME 버튼
 ========================= */
 
 function goHome() {
